@@ -1,0 +1,3 @@
+YTD Sales Var = [YTD Revenue] - [LT YTD Revenue]
+
+YTD Sales Var % = DIVIDE ([YTD Sales Var] , [LY YTD Revenue])

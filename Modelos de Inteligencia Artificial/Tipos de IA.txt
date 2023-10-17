@@ -1,0 +1,11 @@
+﻿Tipos de IA
+* Basado en reglas (clásico) Bot de ajedrez. "si hay un caballo en la línea de ataque de tu alfil, debes comértelo"
+* Aprendizaje automático (machine learning). Dar muchos datos al bot. Por ejemplo, si un bot tiene muchas partidas de ajedrez, puede imitar los movimientos de las fichas y jugar de forma coherente.
+   * Supervisado → Datos etiquetados 
+   * No supervisado → Datos sin etiquetar
+   * Por refuerzo → Prueba - error
+* Aprendizaje profundo (Deep Learning). Tiene la capacidad de aprender. Para ello utiliza redes neuronales.
+   * Redes neuronales profundas → Recomendador de YT
+   * Redes neuronales convolucionales (CNN) → Imágenes
+   * Redes neuronales recurrentes (RNN) → Predicción de clima, procesamiento de texto, etc.
+   * Transformers → Evolución de las Redes neuronales recurrentes. GPT
