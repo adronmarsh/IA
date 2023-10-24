@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<data>
+  <row>
+    <index>Santiago</index>
+    <altura>187</altura>
+    <peso>89</peso>
+  </row>
+  <row>
+    <index>Pedro</index>
+    <altura>178</altura>
+    <peso>80</peso>
+  </row>
+  <row>
+    <index>Julia</index>
+    <altura>170</altura>
+    <peso>72</peso>
+  </row>
+  <row>
+    <index>Ana</index>
+    <altura>165</altura>
+    <peso>67</peso>
+  </row>
+</data>
