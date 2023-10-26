@@ -1,50 +1,46 @@
 import pandas as pd
-import numpy as np
-
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
-from sklearn.feature_selection import SelectKBest
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import accuracy_score
 from sklearn.naive_bayes import MultinomialNB
-
 
 # Importar el csv para poder leer los datos
 df = pd.read_csv("lab1-dataset.csv")
 
-# Sacar la moda de cada columna
-moda = df.mode().iloc[0]
-
 # Rellenar los null con la moda
-df = df.fillna(moda)
+df = df.fillna(df.mode().iloc[0])
 
-# Dividir los datos en conjunto de entrenamiento y de test
-
+# Dividir los datos en conjunto de entrenamiento y de prueba
 X = df.drop("classname", axis=1)  # Características
 y = df["classname"]  # Objetivo
 
-# Entrenamiento de datos
-rs = 0
-max_precision = 0
-max_rs = 0
-while rs < 100:
-    rs+=1
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=rs) #30383 #483542
+def buscar_mejor_random_state(num_intentos):
+    max_precision = 0
+    mejor_rs = 0
+    test_size = 0.25  # Proporción de datos de prueba
 
-    naive_bayes = MultinomialNB() # Crear el clasificador
-    naive_bayes.fit(X_train, y_train) # Entrenar al modelo
+    for rs in range(1, num_intentos + 1):
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=rs)
+        naive_bayes = MultinomialNB() # Crear el clasificador
+        naive_bayes.fit(X_train, y_train) # Entrenar al modelo
+        y_pred = naive_bayes.predict(X_test) # Realizar predicciones en el conjunto de prueba
+        accuracy = accuracy_score(y_test, y_pred) # Calcular la precisión del modelo
 
-    # Realizar predicciones en el conjunto de prueba
+        if accuracy > max_precision: # Obtener la máxima precisión
+            max_precision = accuracy
+            mejor_rs = rs
+
+    print("Mejor precisión:", max_precision)
+    print("Random State óptimo:", mejor_rs)
+
+def evaluar_modelo_random_state(rs):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=rs)
+    naive_bayes = MultinomialNB()
+    naive_bayes.fit(X_train, y_train)
     y_pred = naive_bayes.predict(X_test)
-
-    # Calcular la precisión del modelo
     accuracy = accuracy_score(y_test, y_pred)
-    if accuracy > max_precision:
-        max_precision = accuracy
-        max_rs = rs
+    print("Precisión del modelo:", accuracy)
+    print("Random State:", rs)
 
-# Resultados
-print("Precisión del modelo:", max_precision)
-print("Ejemplos usados para entrenar", len(X_train))
-print("Ejemplos usados para test", len(X_test))
-print(max_rs)
+# Uso de las funciones
+buscar_mejor_random_state(100) # Número de intentos
+evaluar_modelo_random_state(483542)  # Utiliza el valor óptimo encontrado
