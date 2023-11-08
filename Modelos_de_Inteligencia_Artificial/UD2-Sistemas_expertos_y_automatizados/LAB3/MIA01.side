@@ -1,0 +1,21 @@
+{
+  "id": "17b7545b-2ef6-4218-a528-a017ba093693",
+  "version": "2.0",
+  "name": "MIA01",
+  "url": "",
+  "tests": [{
+    "id": "e1871019-67a1-4065-b584-91ec8baec849",
+    "name": "Untitled",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "898abff7-2944-4a40-bbc6-beac46923240",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e1871019-67a1-4065-b584-91ec8baec849"]
+  }],
+  "urls": [],
+  "plugins": []
+}

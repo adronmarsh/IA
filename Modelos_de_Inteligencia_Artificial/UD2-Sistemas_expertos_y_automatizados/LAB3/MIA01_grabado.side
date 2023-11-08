@@ -1,0 +1,251 @@
+{
+  "id": "17b7545b-2ef6-4218-a528-a017ba093693",
+  "version": "2.0",
+  "name": "MIA01",
+  "url": "https://portal.edu.gva.es/iesabastos/es/centre/",
+  "tests": [{
+    "id": "e1871019-67a1-4065-b584-91ec8baec849",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "e97b8da3-8a11-4b3d-b0f7-803c33c556f3",
+    "name": "TEST01",
+    "commands": [{
+      "id": "e8eb0fef-e542-4927-a4f0-47d9be453780",
+      "comment": "",
+      "command": "open",
+      "target": "https://portal.edu.gva.es/iesabastos/es/centre/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40010a10-9eaf-4560-bed8-3bb92cddc20b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3923fe14-99a1-4875-bd34-d6f5bab2d6c5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Siguiente »",
+      "targets": [
+        ["linkText=Siguiente »", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'Siguiente »')]", "xpath:link"],
+        ["xpath=//article[@id='post-12']/div/div/div/div/div/div/div/div/div/div/div/div[3]/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/es/centre/page/2/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Siguiente »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b1ab5ed-08fa-4d1b-9fa7-d9e01e762545",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,152)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "707dbea5-f822-4e78-8803-517088fdbf32",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1043)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39fc135d-1fa5-408c-acfa-01be1d3e41ce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Siguiente »",
+      "targets": [
+        ["linkText=Siguiente »", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'Siguiente »')]", "xpath:link"],
+        ["xpath=//article[@id='post-12']/div/div/div/div/div/div/div/div/div/div/div/div[3]/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/es/centre/page/3/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Siguiente »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bfe3f08-9135-4d1a-9b15-2c47773a9889",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,150)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a9fab9c-2d23-46d5-9685-4555ca31f6d1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Siguiente »",
+      "targets": [
+        ["linkText=Siguiente »", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'Siguiente »')]", "xpath:link"],
+        ["xpath=//article[@id='post-12']/div/div/div/div/div/div/div/div/div/div/div/div[3]/ul/li[9]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/es/centre/page/4/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Siguiente »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72d48d9c-7059-4ce2-adf0-b11044bd61a5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Siguiente »",
+      "targets": [
+        ["linkText=Siguiente »", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'Siguiente »')]", "xpath:link"],
+        ["xpath=//article[@id='post-12']/div/div/div/div/div/div/div/div/div/div/div/div[3]/ul/li[10]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/es/centre/page/5/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[10]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Siguiente »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e06898ab-b2dd-41cf-a14d-e21965d3b12d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Siguiente »",
+      "targets": [
+        ["linkText=Siguiente »", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'Siguiente »')]", "xpath:link"],
+        ["xpath=//article[@id='post-12']/div/div/div/div/div/div/div/div/div/div/div/div[3]/ul/li[11]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/es/centre/page/6/')])[2]", "xpath:href"],
+        ["xpath=//li[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Siguiente »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b7ee890-b97d-4ce7-9deb-d1f53004d363",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Siguiente »",
+      "targets": [
+        ["linkText=Siguiente »", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'Siguiente »')]", "xpath:link"],
+        ["xpath=//article[@id='post-12']/div/div/div/div/div/div/div/div/div/div/div/div[3]/ul/li[11]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/es/centre/page/7/')])[2]", "xpath:href"],
+        ["xpath=//li[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Siguiente »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5430987-3184-466d-89f6-6df2c0212096",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,131)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10c5562c-602e-46f9-bd3a-8f2b1b97d59c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,857)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acece18c-31b0-4e43-be95-bc248da69596",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Siguiente »",
+      "targets": [
+        ["linkText=Siguiente »", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'Siguiente »')]", "xpath:link"],
+        ["xpath=//article[@id='post-12']/div/div/div/div/div/div/div/div/div/div/div/div[3]/ul/li[11]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/es/centre/page/8/')])[2]", "xpath:href"],
+        ["xpath=//li[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Siguiente »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fdeaec8-4a28-4423-9465-5d38e58f21af",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,275)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad77ecd2-ea2b-4a01-b3e4-c14989a61dfc",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,851)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a704f1e6-453c-42b0-9ee6-ada7066cbede",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Siguiente »",
+      "targets": [
+        ["linkText=Siguiente »", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'Siguiente »')]", "xpath:link"],
+        ["xpath=//article[@id='post-12']/div/div/div/div/div/div/div/div/div/div/div/div[3]/ul/li[11]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/es/centre/page/9/')])[2]", "xpath:href"],
+        ["xpath=//li[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Siguiente »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7c5f0d6-687b-488a-aafd-cd98dce534c4",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,117)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "033f9a10-58ff-4014-a446-5d8b959de3a4",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,653)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "639dda77-d975-4438-91a0-dea54690a93f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Siguiente »",
+      "targets": [
+        ["linkText=Siguiente »", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'Siguiente »')]", "xpath:link"],
+        ["xpath=//article[@id='post-12']/div/div/div/div/div/div/div/div/div/div/div/div[3]/ul/li[11]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/es/centre/page/10/')])[2]", "xpath:href"],
+        ["xpath=//li[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Siguiente »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0b468ed-2f03-4d90-89e9-db044d5a4090",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,104)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d45ce59-a025-4498-9822-0717ac991eeb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,987)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "898abff7-2944-4a40-bbc6-beac46923240",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e1871019-67a1-4065-b584-91ec8baec849"]
+  }],
+  "urls": [],
+  "plugins": []
+}
