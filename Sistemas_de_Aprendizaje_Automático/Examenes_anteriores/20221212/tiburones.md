@@ -14,7 +14,7 @@
 <p> En este caso, el procedimiento más correcto hubiera sido rellenar el valor nulo con la moda. Esto no afectaría en gran medida a la conclusión final y tendríamos un dato más que aportar. </p>
 
 ```copyable
-ds_USA.drop(ds_USA[ds_USA['Area'].isna()].index, inplace = np.mean(de_USA['Area]))
+ds_USA['Area'].fillna(ds_USA['Area'].mode()[0], inplace=True)
 ```
 
 ### 5. ¿En la práctica aparecen outliers?, explícalo.
@@ -28,6 +28,12 @@ ds_USA.drop(ds_USA[ds_USA['Area'].isna()].index, inplace = np.mean(de_USA['Area]
 ### 9. ¿Con qué atributos nos quedaremos si aplicamos Correlación? Explica la respuesta
 
 ### 10.  En Backward Elimination, ¿hay algún error en el código? Explícalo
+<p>Aunque el código es bastante correcto hay un pequeño error.</p>
+
+    pmax = max(p) # de esta forma pmax esstá recibiendo el valor de todos los p-values
+<p>Debería ser de la siguiente manera:</p>
+
+    pmax = p.max() # de esta forma pmax contendrá el máximo p-value asociado a una característica específica
 
 ### 11. ¿Qué es la discretización y el 1 hot encoding? Pon un ejemplo para ambos casos aplicado a la práctica. 
  
