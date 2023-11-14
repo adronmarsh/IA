@@ -1,7 +1,8 @@
-services:
+version: "3.7"
+services: 
   node-red:
     image: nodered/node-red:latest
-    container_name: nodeRED
+    container_name: nodeRED3.7
     restart: unless-stopped
     networks:
       - net
