@@ -1,0 +1,8 @@
+Manual installation steps for older versions of WSL:
+https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
+Instalando y probando Docker en Windows 10:
+https://www.enmilocalfunciona.io/instalando-y-probando-docker-en-windows-10/
+
+Install on Windows:
+https://docs.docker.com/desktop/install/windows-install/
