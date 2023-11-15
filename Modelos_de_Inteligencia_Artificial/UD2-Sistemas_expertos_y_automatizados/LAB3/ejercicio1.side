@@ -1,0 +1,49 @@
+{
+  "id": "dcc1451f-af46-44a6-9f37-de46ef21b922",
+  "version": "2.0",
+  "name": "ejercicio 1",
+  "url": "https://www.americanairlines.es",
+  "tests": [{
+    "id": "0c79d780-c5c5-41a6-948b-0319e145cb8f",
+    "name": "Aceptar Cookies",
+    "commands": [{
+      "id": "156c4341-74ad-4d69-b23d-5f8e87c780cc",
+      "comment": "",
+      "command": "open",
+      "target": "/intl/es/index.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a132d303-0fba-48d7-9a41-f8a8679737fa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1060",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6102310b-37b8-499d-8e4b-0343bb1a82e4",
+      "comment": "",
+      "command": "click",
+      "target": "name=optoutmulti_button",
+      "targets": [
+        ["name=optoutmulti_button", "name"],
+        ["css=.optoutmulti_button", "css:finder"],
+        ["xpath=//button[@name='optoutmulti_button']", "xpath:attributes"],
+        ["xpath=//div[@id='aa_optoutmulti-Modal']/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d9db0d2f-122f-4269-9f5e-4d739ee186b1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0c79d780-c5c5-41a6-948b-0319e145cb8f"]
+  }],
+  "urls": ["https://www.americanairlines.es/"],
+  "plugins": []
+}

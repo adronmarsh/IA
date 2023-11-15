@@ -1,0 +1,134 @@
+{
+  "id": "6fca53fb-fd8c-4973-b1c8-2bf46045207a",
+  "version": "2.0",
+  "name": "ejercicio4",
+  "url": "https://portal.edu.gva.es",
+  "tests": [{
+    "id": "d0293666-7943-4da3-ae7a-9dd687a3f354",
+    "name": "ejercicio4",
+    "commands": [{
+      "id": "3416d9ec-7885-469f-a013-178da3f7842a",
+      "comment": "",
+      "command": "open",
+      "target": "/iesabastos/es/centre/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6635e247-2ccc-45dd-ac04-4a15feec8beb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1060",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f151793-acf3-4aff-bc68-842f128355df",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Acceder",
+      "targets": [
+        ["linkText=Acceder", "linkText"],
+        ["css=#tercera-linea-gva_bloque > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Acceder')]", "xpath:link"],
+        ["xpath=//div[@id='tercera-linea-gva_bloque']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/wp-login.php?redirect_to=https%3A%2F%2Fportal.edu.gva.es%2Fiesabastos%2Fes%2Fcentre')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Acceder')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60f44d9e-9b2a-4c4f-8e0e-3794cbb472a6",
+      "comment": "",
+      "command": "type",
+      "target": "id=user_login",
+      "targets": [
+        ["id=user_login", "id"],
+        ["name=log", "name"],
+        ["css=#user_login", "css:finder"],
+        ["xpath=//input[@id='user_login']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/p/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "sdsdsd"
+    }, {
+      "id": "c564e066-575c-49a8-bc31-727b23f2b17e",
+      "comment": "",
+      "command": "click",
+      "target": "id=user_pass",
+      "targets": [
+        ["id=user_pass", "id"],
+        ["name=pwd", "name"],
+        ["css=#user_pass", "css:finder"],
+        ["xpath=//input[@id='user_pass']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7829d78-ce46-47f3-a69b-e4bf3236019b",
+      "comment": "",
+      "command": "type",
+      "target": "id=user_pass",
+      "targets": [
+        ["id=user_pass", "id"],
+        ["name=pwd", "name"],
+        ["css=#user_pass", "css:finder"],
+        ["xpath=//input[@id='user_pass']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "sdcsdcsdcsdc"
+    }, {
+      "id": "15deabf9-e213-432c-b01e-40352a604cb4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=wp-submit",
+      "targets": [
+        ["id=wp-submit", "id"],
+        ["name=wp-submit", "name"],
+        ["css=#wp-submit", "css:finder"],
+        ["xpath=//input[@id='wp-submit']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "feabd3f4-3eff-45cd-b560-0d6b624c128d",
+      "comment": "",
+      "command": "click",
+      "target": "id=wp-submit",
+      "targets": [
+        ["id=wp-submit", "id"],
+        ["name=wp-submit", "name"],
+        ["css=#wp-submit", "css:finder"],
+        ["xpath=//input[@id='wp-submit']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b0830f2-3a8c-4736-9c08-5095fa614556",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=wp-submit",
+      "targets": [
+        ["id=wp-submit", "id"],
+        ["name=wp-submit", "name"],
+        ["css=#wp-submit", "css:finder"],
+        ["xpath=//input[@id='wp-submit']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1c94ee84-e9f2-41b8-805f-f517e1738874",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d0293666-7943-4da3-ae7a-9dd687a3f354"]
+  }],
+  "urls": ["https://portal.edu.gva.es/"],
+  "plugins": []
+}

@@ -1,0 +1,59 @@
+{
+  "id": "e9535a0a-bab4-422d-97e8-0abffeddc27c",
+  "version": "2.0",
+  "name": "ejercicio2",
+  "url": "https://portal.edu.gva.es",
+  "tests": [{
+    "id": "2b09e435-eddb-4116-9350-c7cc79ef9e75",
+    "name": "mover la bandera de la UE",
+    "commands": [{
+      "id": "b7cbb565-0f4a-4ae8-b1bf-089f73c2b2e8",
+      "comment": "",
+      "command": "open",
+      "target": "/iesabastos/es/centre/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fd93abc-5083-48c2-a2aa-de72059f758f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1060",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7929e40-a1e5-48f5-aa8b-77bf4c633c97",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=a:nth-child(24) > img",
+      "targets": [
+        ["css=a:nth-child(24) > img", "css:finder"],
+        ["xpath=//img[@alt='FSE']", "xpath:img"],
+        ["xpath=//aside[@id='custom_html-2']/div/div/a[12]/img", "xpath:idRelative"],
+        ["xpath=//a[12]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9ff03be-e1a4-4bf4-915e-41e615bf4255",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=a:nth-child(24) > img",
+      "targets": [
+        ["css=a:nth-child(24) > img", "css:finder"],
+        ["xpath=//img[@alt='FSE']", "xpath:img"],
+        ["xpath=//aside[@id='custom_html-2']/div/div/a[12]/img", "xpath:idRelative"],
+        ["xpath=//a[12]/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7857c679-441d-4b9f-b55f-3b7f0d52f2d3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2b09e435-eddb-4116-9350-c7cc79ef9e75"]
+  }],
+  "urls": ["https://portal.edu.gva.es/"],
+  "plugins": []
+}

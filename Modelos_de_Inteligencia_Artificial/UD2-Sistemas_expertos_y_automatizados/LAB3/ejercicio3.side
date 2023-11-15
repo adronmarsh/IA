@@ -1,0 +1,116 @@
+{
+  "id": "1a97ec24-bd84-4509-a2db-c75b2a9201c9",
+  "version": "2.0",
+  "name": "ejercicio3",
+  "url": "https://portal.edu.gva.es",
+  "tests": [{
+    "id": "a6f3c978-4fdf-446b-a1df-4b923e45949c",
+    "name": "ejercicio3",
+    "commands": [{
+      "id": "f5e9ac42-fd4c-47d7-93fa-d9ccfc22e621",
+      "comment": "",
+      "command": "open",
+      "target": "/iesabastos/es/centre/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be549082-dab8-4a6e-a19f-4f2498d31cef",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1060",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52eec58e-9c11-498e-a703-387fc51720dc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Siguiente »",
+      "targets": [
+        ["linkText=Siguiente »", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'Siguiente »')]", "xpath:link"],
+        ["xpath=//article[@id='post-12']/div/div/div/div/div/div/div/div/div/div/div/div[3]/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/iesabastos/es/centre/page/2/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Siguiente »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54d69117-4760-4172-a10c-3a99699989c4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Aviso legal",
+      "targets": [
+        ["linkText=Aviso legal", "linkText"],
+        ["css=p:nth-child(3) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Aviso legal')]", "xpath:link"],
+        ["xpath=//footer[@id='gva-footer-es']/div/p[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://portal.edu.gva.es/portal/es/avis-legal/')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Aviso legal')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59565df2-6ca7-4a04-800d-0033c3de79a4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Mapa web",
+      "targets": [
+        ["linkText=Mapa web", "linkText"],
+        ["css=p:nth-child(3) > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Mapa web')]", "xpath:link"],
+        ["xpath=//footer[@id='gva-footer-es']/div/p[3]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://portal.edu.gva.es/portal/es/mapa-web/')]", "xpath:href"],
+        ["xpath=//p[3]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Mapa web')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1271434a-605a-4425-99c2-71651095749d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Contacto",
+      "targets": [
+        ["linkText=Contacto", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Contacto')])[2]", "xpath:link"],
+        ["xpath=//footer[@id='gva-footer-es']/div/p[3]/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://portal.edu.gva.es/portal/es/contacto-con-portaledu/')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfd7b1ad-d577-4b9a-adff-685e242e66ad",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Accesibilidad",
+      "targets": [
+        ["linkText=Accesibilidad", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Accesibilidad')]", "xpath:link"],
+        ["xpath=//footer[@id='gva-footer-es']/div/p[3]/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://ceice.gva.es/es/accesibilidad/')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Accesibilidad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "050e51b8-a618-4a03-b545-4d08b225e6a5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,4186)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0e89d6d3-0fb4-46da-a8ae-249e46387b6e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a6f3c978-4fdf-446b-a1df-4b923e45949c"]
+  }],
+  "urls": ["https://portal.edu.gva.es/"],
+  "plugins": []
+}
