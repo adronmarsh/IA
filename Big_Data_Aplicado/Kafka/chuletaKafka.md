@@ -21,7 +21,7 @@ bin/kafka-console-producer.sh--broker-list localhost:9092 --topic testTopic --fr
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic testTopic --from-beginning
 ```
 
-## Borramos un topic
+## Borrar topic
 ```copyable
 bin/kafka-topics.sh --delete --bootstrap-server localhost:9092
 ```
