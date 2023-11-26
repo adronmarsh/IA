@@ -26,7 +26,7 @@ bin/kafka-topics.sh --describe --zookeeper localhost:9092 --topic testTopic
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic testTopic --from-beginning
 ```
 
-## Borramos un topic
+## Borrar topic
 ```copyable
 bin/kafka-topics.sh --delete --bootstrap-server localhost:9092
 ```
@@ -58,10 +58,16 @@ Copiamos varias veces el fichero properties
 $ cd /usr/local/kafka/config
 ```
 ```copyable
-$ ls
+$ cp server.properties server-0.properties
 ```
 ```copyable
-$ cp server.properties server-0.properties
+$ cp server.properties server-1.properties
+```
+```copyable
+$ cp server.properties server-2.properties
+```
+```copyable
+$ cp server.properties server-3.properties
 ```
 ```copyable
 server-0.properties
