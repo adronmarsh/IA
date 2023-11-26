@@ -16,6 +16,11 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 bin/kafka-console-producer.sh--broker-list localhost:9092 --topic testTopic --from-beginning
 ```
 
+## Describe topic
+```copyable
+bin/kafka-topics.sh --describe --zookeeper localhost:9092 --topic testTopic
+```
+
 ## Ejecutar topic
 ```copyable
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic testTopic --from-beginning
@@ -163,12 +168,12 @@ $ kafka-console-producer.sh --broker-list localhost:9092,localhost:9093 --topic 
 
 2) Creamos 1er consumidor (nueva consola)
 ```copyable
-$ kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p1g --consumer-property group.id=grupo1
+$ kafka-console-consumer.sh --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p1g --consumer-property group.id=grupo1
 ```
 
 3) Creamos 2do consumidor (nueva consola)
 ```copyable
-$ kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p1g --consumer-property group.id=grupo1
+$ kafka-console-consumer.sh --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p1g --consumer-property group.id=grupo1
 ```
 
 4) Desde el productor creamos varios mensajes
