@@ -17,7 +17,7 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 
 ## Editar topic
 ```copyable
-bin/kafka-console-producer.sh--broker-list localhost:9092 --topic testTopic --from-beginning
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic testTopic --from-beginning
 ```
 
 ## Ejecutar topic
