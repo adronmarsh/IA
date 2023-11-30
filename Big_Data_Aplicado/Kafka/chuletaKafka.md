@@ -1,7 +1,11 @@
 # Kafka
 
+## Ir a la carpeta de Kafka
+```copyable
+cd /usr/local/kafka/
+```
+----------------------------------------------------------------------------
 ## Crear Topic
-
 ```copyable
 bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic testTopic
 ```
@@ -29,15 +33,22 @@ bin/kafka-topics.sh --delete --bootstrap-server localhost:9092
 
 ----------------------------------------------------------------------------
 
+## Listar Zookeeper
 ```copyable
 bin/kafka-topics.sh --list --zookeeper localhost:2181
 ```
+
+## Crear Zookeeper
 ```copyable
 bin/kafka-topics.sh --create --zookeeper localhost:2181 -replication-factor 1 --partitions 1 --topic testTopic
 ```
+
+## Eliminar Zookeeper
 ```copyable
 bin/kafka-topics.sh --delete --zookeeper localhost:2181 -topic testTopic
 ```
+
+## Información Zookeeper
 ```copyable
 bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic testTopic
 ```
@@ -47,11 +58,13 @@ bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic testTopic
 
 ## LEVANTAR VARIOS KAFKA
 
-Copiamos varias veces el fichero properties
+Vamos a copiar varias veces el fichero properties. Para ello:
 
+### Ir a la carpeta de configuración
 ```copyable
 cd /usr/local/kafka/config
 ```
+### Copiar los ficheros properties
 ```copyable
 cp server.properties server-0.properties
 ```
@@ -64,11 +77,45 @@ cp server.properties server-2.properties
 ```copyable
 cp server.properties server-3.properties
 ```
+### Modificar los ficheros properties
+#### server-0.properties
 ```copyable
-server-0.properties
+sudo nano server-0.properties
+```
+```copyable
     broker.id=0
     listeners=PLAINTEXT://:9092
     log.dirs=/tmp/kafka-logs-0
+    zookeeper.connect=localhost:2181 
+```
+#### server-1.properties
+```copyable
+sudo nano server-1.properties
+```
+```copyable
+    broker.id=1
+    listeners=PLAINTEXT://:9093
+    log.dirs=/tmp/kafka-logs-1
+    zookeeper.connect=localhost:2181 
+```
+#### server-2.properties
+```copyable
+sudo nano server-2.properties
+```
+```copyable
+    broker.id=2
+    listeners=PLAINTEXT://:9094
+    log.dirs=/tmp/kafka-logs-2
+    zookeeper.connect=localhost:2181 
+```
+#### server-3.properties
+```copyable
+sudo nano server-3.properties
+```
+```copyable
+    broker.id=3
+    listeners=PLAINTEXT://:9095
+    log.dirs=/tmp/kafka-logs-3
     zookeeper.connect=localhost:2181 
 ```
 
@@ -133,7 +180,7 @@ sudo /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost
 
 ### Creamos 1 productor + 3 consumidores
 
-1) Creamos el 3do consumidor (consola a parte)
+1) Creamos el 3er consumidor (consola a parte)
 ```copyable
 sudo /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p1
 ```
@@ -143,7 +190,7 @@ sudo /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost
 
 ## Ejemplo Multinodo 2: 
 
-### 1 productor + 2 consumidores en grupo- 1 particion
+### 1 productor + 2 consumidores en grupo- 1 partición
 
 1) Paramos los productores y consumidores del ejercicio anterior
 
@@ -160,7 +207,7 @@ $ kafka-topics.sh --describe --zookeeper localhost:2181 --topic topicf3p1g
 
 ----------------------------------------------------------------------------
 
-### 1 productor + 2 consumidores en grupo - 1 particion
+### 1 productor + 2 consumidores en grupo - 1 partición
 
 1) Creamos un productor (nueva consola)
 ```copyable
