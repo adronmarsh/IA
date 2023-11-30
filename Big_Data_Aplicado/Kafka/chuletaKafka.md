@@ -30,7 +30,6 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic testTopi
 bin/kafka-topics.sh --delete --bootstrap-server localhost:9092
 ```
 
-
 ----------------------------------------------------------------------------
 
 ## Listar Zookeeper
@@ -54,7 +53,6 @@ bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic testTopic
 ```
 
 ----------------------------------------------------------------------------
-
 
 ## LEVANTAR VARIOS KAFKA
 
