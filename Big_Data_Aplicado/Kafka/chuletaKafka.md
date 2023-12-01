@@ -209,17 +209,17 @@ $ kafka-topics.sh --describe --zookeeper localhost:2181 --topic topicf3p1g
 
 1) Creamos un productor (nueva consola)
 ```copyable
-$ kafka-console-producer.sh --broker-list localhost:9092,localhost:9093 --topic topicf3p1g
+kafka-console-producer.sh --broker-list localhost:9092,localhost:9093 --topic topicf3p1g
 ```
 
 2) Creamos 1er consumidor (nueva consola)
 ```copyable
-$ kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p1g --consumer-property group.id=grupo1
+kafka-console-consumer.sh --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p1g --consumer-property group.id=grupo1
 ```
 
 3) Creamos 2do consumidor (nueva consola)
 ```copyable
-$ kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p1g --consumer-property group.id=grupo1
+kafka-console-consumer.sh --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p1g --consumer-property group.id=grupo1
 ```
 
 4) Desde el productor creamos varios mensajes
@@ -237,13 +237,13 @@ $ kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093 --topi
 1) Paramos los productores y consumidores del ejercicio anterior
 2) Creamos un nuevo topic
 ```copyable
-$ kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 3 --partitions 2 --topic topicf3p2g
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 3 --partitions 2 --topic topicf3p2g
 ```
 ```copyable
-$ kafka-topics.sh --list --zookeeper localhost:2181
+kafka-topics.sh --list --zookeeper localhost:2181
 ```
 ```copyable
-$kafka-topics.sh --describe --zookeeper localhost:2181 --topic topicf3p2g
+kafka-topics.sh --describe --zookeeper localhost:2181 --topic topicf3p2g
 ```
 
 ----------------------------------------------------------------------------
@@ -252,17 +252,17 @@ $kafka-topics.sh --describe --zookeeper localhost:2181 --topic topicf3p2g
 
 1) Creamos un productor (nueva consola)
 ```copyable
-$ kafka-console-producer.sh --broker-list localhost:9092,localhost:9093 --topic topicf3p2g
+kafka-console-producer.sh --broker-list localhost:9092,localhost:9093 --topic topicf3p2g
 ```
 
 2) Creamos 1er consumidor (nueva consola)
 ```copyable
-$ kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p2g --consumer-property group.id=grupo1
+kafka-console-consumer.sh --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p2g --consumer-property group.id=grupo1
 ```
 
 3) Creamos 2do consumidor (nueva consola)
 ```copyable
-$ kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p2g --consumer-property group.id=grupo1
+kafka-console-consumer.sh --bootstrap-server localhost:9092,localhost:9093 --topic topicf3p2g --consumer-property group.id=grupo1
 ```
 
 4) Desde el productor creamos varios mensajes
