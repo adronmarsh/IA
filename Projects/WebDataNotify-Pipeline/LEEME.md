@@ -32,6 +32,7 @@ WebDataNotify Pipeline está diseñado para automatizar la monitorización de in
 
 ## Requisitos
 
+- Tener un servidor Kafka en ejecución en localhost:9092
 - Python 3.x
 - Bibliotecas: requests, bs4 (BeautifulSoup), csv, datetime, socket, json, yaml, smtplib, confluent_kafka
 
