@@ -91,7 +91,6 @@ def main():
 
     print(f"Listo! Se han generado {nurls} filas")
 
-    # Send email
     subject = "Número de filas generadas"
     message = f"Se han generado {nurls} filas al ejecutar el código."
     msg = MIMEMultipart()
