@@ -1,0 +1,130 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+    box-sizing: border-box;
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: auto;
+}
+
+#chat {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 90%;
+    padding: 40px;
+    background-color: #333;
+
+}
+
+#input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    align-self: flex-end;
+    width: 100%;
+}
+
+#user-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    margin-right: 8px;
+    color: #f0efef;
+    background-color: #444;
+}
+
+.usuario, .asistente {
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: wrap;
+    transition: background-color 0.3s ease;
+}
+
+.usuario:hover,
+.asistente:hover {
+    /* background-color: #666666; */
+    opacity: 95%;
+}
+
+.usuario:active,
+.asistente:active {
+    background-color: #444;
+}
+
+.usuario {
+    background-color: #bd0de925;
+    align-self: flex-end;
+}
+
+.asistente {
+    background-color: #16f6be3b;
+    align-self: flex-start;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #16f6be70;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #16f6be8c;
+}
+
+button:active {
+    background-color: #16f6beb2;
+}
+
+#toggleAnimationContainer {
+    margin-left: 20px;
+}
+
+#toggleAnimationBtn {
+    background-color: #28a745;
+    color: #fff;
+    margin-right: 10px;
+    height: 100%;
+}
+
+#toggleAnimationBtn.disabled {
+    background-color: #dc3545;
+}
+
+#sendBtn i {
+    font-size: 20px;
+}
+
+.foto-perfil {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 10px;
+    background-color: transparent;
+    border-radius: 20px;
+  }

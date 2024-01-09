@@ -1,0 +1,19 @@
+{
+    "ia": "La inteligencia artificial (IA) se refiere a la capacidad de las máquinas para realizar tareas que normalmente requieren inteligencia humana, como el aprendizaje, el razonamiento y la toma de decisiones.",
+    "aprendizaje automatico": "El aprendizaje automático es una subdisciplina de la IA que se centra en el desarrollo de algoritmos y modelos que permiten a las máquinas aprender y mejorar a partir de datos.",
+    "redes neuronales": "Las redes neuronales artificiales son modelos de aprendizaje automático inspirados en la estructura y funcionamiento del cerebro humano, utilizadas para tareas de reconocimiento de patrones y toma de decisiones.",
+    "aprendizaje profundo": "El aprendizaje profundo es una rama del aprendizaje automático que se basa en redes neuronales profundas, capaces de aprender representaciones jerárquicas de datos, y es fundamental en aplicaciones como el procesamiento de imágenes y el procesamiento de lenguaje natural.",
+    "algoritmo de clasificacion": "Un algoritmo de clasificación es un tipo de algoritmo de aprendizaje automático que se utiliza para asignar categorías o etiquetas a datos en función de sus características.",
+    "algoritmo de regresion": "Un algoritmo de regresión es un tipo de algoritmo de aprendizaje automático que se utiliza para predecir valores numéricos o continuos a partir de datos de entrada.",
+    "aprendizaje supervisado": "El aprendizaje supervisado es un enfoque de aprendizaje automático en el que el modelo se entrena utilizando un conjunto de datos etiquetado, es decir, se proporciona información sobre la salida deseada para cada entrada.",
+    "aprendizaje no supervisado": "El aprendizaje no supervisado es un enfoque de aprendizaje automático en el que el modelo se entrena para identificar patrones y estructuras en los datos sin la necesidad de etiquetas previas.",
+    "aprendizaje por refuerzo": "El aprendizaje por refuerzo es un enfoque de aprendizaje automático en el que un agente aprende a tomar decisiones óptimas mediante la interacción con un entorno y la recepción de recompensas o penalizaciones.",
+    "procesamiento de lenguaje natural": "El procesamiento de lenguaje natural (PLN) es una rama de la IA que se ocupa de la interacción entre las computadoras y el lenguaje humano, permitiendo a las máquinas comprender, interpretar y generar texto o habla.",
+    "visión por computadora": "La visión por computadora es una disciplina de la IA que se centra en el desarrollo de algoritmos y sistemas que permiten a las máquinas interpretar y comprender imágenes y videos.",
+    "red neuronal convolucional": "Una red neuronal convolucional (CNN) es un tipo de red neuronal utilizada en visión por computadora para el procesamiento de imágenes, que emplea capas convolucionales para detectar características y patrones visuales.",
+    "procesamiento de voz": "El procesamiento de voz es una rama de la IA que se enfoca en el análisis y síntesis de señales de audio y voz humana, utilizado en aplicaciones como reconocimiento de voz y síntesis de voz.",
+    "chatbot": "Un chatbot es una aplicación de IA diseñada para interactuar y comunicarse con los usuarios de manera conversacional, a menudo utilizado en servicio al cliente y asistencia virtual.",
+    "aprendizaje por transferencia": "El aprendizaje por transferencia es una técnica de aprendizaje automático en la que un modelo preentrenado se ajusta o se utiliza como punto de partida para resolver una tarea relacionada.",
+    "automatizacion de procesos": "La automatización de procesos mediante IA se refiere a la utilización de algoritmos y sistemas inteligentes para automatizar tareas y procesos comerciales, aumentando la eficiencia y reduciendo el error humano.",
+    "apuntes": 3
+}
