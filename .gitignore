@@ -1,4 +1,5 @@
 /node_modules
+/Sistemas_de_Big_Data/NodeRed/node-red
 package-lock.json
 package.json
 /Projects/ChatBot/model
