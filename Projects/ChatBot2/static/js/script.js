@@ -1,3 +1,26 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var darkModeButton = document.getElementById('toggle-dark-mode');
+
+    function updateButtonText() {
+        darkModeButton.textContent = document.body.getAttribute('data-theme') === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+
+    darkModeButton.addEventListener('click', function() {
+        var body = document.body;
+        var newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        body.setAttribute('data-theme', newTheme);
+
+        // Save the user's preference to local storage
+        localStorage.setItem('theme', newTheme);
+        updateButtonText();
+    });
+
+    // Load the theme from local storage and update the button text accordingly
+    var savedTheme = localStorage.getItem('theme') || 'light'; // Default to light theme
+    document.body.setAttribute('data-theme', savedTheme);
+    updateButtonText();
+});
+
 document.addEventListener('click', function (event) {
     var isClickInsideMenu = event.target.closest('.message-menu');
     var isClickOnMessage = event.target.closest('.userText, .botText');
@@ -128,6 +151,13 @@ function loadChatHistory() {
         chatbox.scrollTop = chatbox.scrollHeight;
     }
 }
+
+function changeLanguage() {
+    var selectedLanguage = document.getElementById('language-select').value;
+    console.log('Language changed to: ' + selectedLanguage);
+
+}
+
 
 // Load chat history when the page loads
 window.onload = loadChatHistory;
