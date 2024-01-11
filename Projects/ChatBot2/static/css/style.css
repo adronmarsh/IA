@@ -1,0 +1,206 @@
+
+:root {
+    --bg-color: #121212;
+    --chat-container-bg-color: #2a2a2a;
+    --chatbox-bg-color: #1e1e1e;
+    --timestamp-color: #ccc;
+    --user-msg-bg-color: #0b93f6;
+    --bot-msg-bg-color: #333333;
+    --menu-bg-color: #333;
+    --menu-btn-hover-color: #444;
+    --text-color: #fff;
+    --input-border-color: #3a3a3a;
+    --border-radius: 8px;
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 80%;
+    max-width: 800px;
+    background-color: var(--chat-container-bg-color);
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+#chatbox {
+    height: 500px;
+    overflow-y: auto;
+    background-color: var(--chatbox-bg-color);
+    padding: 20px;
+    border-bottom: 1px solid var(--input-border-color);
+}
+
+.timestamp {
+    color: var(--timestamp-color);
+    font-size: 0.85em;
+    margin-top: 4px;
+    display: block;
+}
+
+.botText, .userText {
+    position: relative;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    clear: both;
+    padding: 10px;
+    margin-bottom: 4px;
+    border-radius: var(--border-radius);
+    max-width: 100%;
+    word-wrap: break-word;
+    padding-bottom: 20px;
+}
+
+.botText {
+    align-items: flex-start;
+}
+
+.botText > span, .userText > span {
+    padding: 10px 15px;
+    border-radius: 15px;
+    display: inline-block;
+    max-width: calc(100% - 20px);
+    word-wrap: break-word;
+    animation: slideIn 0.3s ease;
+}
+
+.botText .timestamp {
+    text-align: left;
+}
+
+.userText .timestamp {
+    text-align: right;
+}
+
+.botText > span {
+    background-color: var(--bot-msg-bg-color);
+    text-align: left;
+}
+
+.userText > span {
+    background-color: var(--user-msg-bg-color);
+    color: var(--text-color);
+    text-align: left;
+}
+
+.input-container {
+    display: flex;
+    border-top: 1px solid var(--input-border-color);
+}
+
+#buttonInput, #textInput {
+    font-size: var(--font-size);
+    padding: 10px;
+    border: none;
+    background-color: var(--user-msg-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#buttonInput {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#textInput {
+    flex-grow: 1;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.userText .delete-btn {
+    display: none;
+    margin-left: 8px;
+}
+
+.userText:hover .delete-btn {
+    display: inline;
+}
+
+.message-menu {
+    background-color: var(--menu-bg-color);
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    z-index: 10;
+    display: none;
+}
+
+.message-menu button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0;
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.message-menu button:hover {
+    background-color: var(--menu-btn-hover-color);
+}
+
+/* Scrollbar styling */
+#chatbox::-webkit-scrollbar {
+    width: 12px;
+}
+
+#chatbox::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 10px;
+}
+
+#chatbox::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+    border: 3px solid #2a2a2a;
+}
+
+#chatbox::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* For Firefox */
+#chatbox {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #2a2a2a;
+}
+
+/* For other browsers */
+#chatbox {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}

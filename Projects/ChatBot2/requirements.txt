@@ -1,0 +1,3 @@
+Flask
+nltk
+tensorflow  # or tensorflow-cpu if you don't have a GPU
