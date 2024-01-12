@@ -11,7 +11,12 @@ def countWords(archivo):
         content = file.read().lower()
         translator = str.maketrans('', '', string.punctuation)
         words = content.translate(translator).split()
-        df = pd.DataFrame(words, columns=['Palabra'])
+        filtred_words = []
+        for i in words:
+            if(len(i)>=6):
+                filtred_words.append(i)
+                
+        df = pd.DataFrame(filtred_words, columns=['Palabra'])
         
         # Cuenta las veces que se repite cada palabra
         contador = df['Palabra'].value_counts().to_dict()

@@ -4,3 +4,4 @@ package-lock.json
 package.json
 /Projects/ChatBot/model
 /Projects/ChatBot2/venv
+/Projects/ChatBot2/chatbot/__pycache__
