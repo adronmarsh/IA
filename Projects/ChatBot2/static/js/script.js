@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
+    var startWidth, startX, chatContainer;
+
+    // Function to start dragging
+    function startDrag(e) {
+        startX = e.clientX;
+        startWidth = parseInt(document.defaultView.getComputedStyle(document.querySelector('.side-menu')).width, 10);
+        chatContainer = document.querySelector('.chat-container'); // Get the chat container
+        document.documentElement.addEventListener('mousemove', doDrag, false);
+        document.documentElement.addEventListener('mouseup', stopDrag, false);
+    }
+
+    // Function to perform dragging
+    function doDrag(e) {
+        var currentWidth = e.clientX - startX;
+        var newSidebarWidth = (startWidth + currentWidth) + 'px';
+        document.querySelector('.side-menu').style.width = newSidebarWidth;
+        chatContainer.style.marginLeft = newSidebarWidth; // Update the chat container margin
+    }
+
+    // Function to stop dragging
+    function stopDrag() {
+        document.documentElement.removeEventListener('mousemove', doDrag, false);    
+        document.documentElement.removeEventListener('mouseup', stopDrag, false);
+    }
+
+    // Attach the mousedown event to the handle
+    document.querySelector('.drag-handle').addEventListener('mousedown', startDrag, false);
     var darkModeButton = document.getElementById('toggle-dark-mode');
 
     function updateButtonText() {

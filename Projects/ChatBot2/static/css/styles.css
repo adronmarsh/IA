@@ -11,7 +11,7 @@
     --menu-bg-color: #f0f0f0;
     --menu-btn-hover-color: #ddd;
     --input-border-color: #ccc;
-    --border-radius: 8px;
+    --border-radius: 0px;
     --font-family: 'Arial', sans-serif;
     --font-size: 16px;
 }
@@ -31,6 +31,14 @@
     --input-border-color: #3a3a3a;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+html {
+    overflow: hidden;
+}
 body {
     font-family: var(--font-family);
     background-color: var(--bg-color);
@@ -44,19 +52,26 @@ body {
 }
 
 .chat-container {
-    width: 80%;
-    max-width: 800px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 250px);
+    height: 100%;
+    /* width: 80%; */
     background-color: var(--chat-container-bg-color);
     border: 1px solid var(--input-border-color);
     border-radius: var(--border-radius);
     overflow: hidden;
     margin-left: 250px;
+    width: calc(100% - 250px);
+    /* transition: margin-left 0s; */
 }
 
 #chatbox {
-    height: 500px;
+    flex-grow: 1;
     overflow-y: auto;
     background-color: var(--chatbox-bg-color);
+    margin: 0;
     padding: 20px;
     border-bottom: 1px solid var(--input-border-color);
 }
@@ -91,7 +106,7 @@ body {
     padding: 10px 15px;
     border-radius: 15px;
     display: inline-block;
-    max-width: calc(100% - 20px);
+    max-width: 80%;
     word-wrap: break-word;
     animation: slideIn 0.3s ease;
     cursor: pointer;
@@ -236,6 +251,18 @@ body {
     padding: 20px;
     box-sizing: border-box;
     border-right: 1px solid #444;
+    z-index: 2;
+    resize: horizontal; /* Make the sidebar resizable */
+    overflow: hidden;
+}
+
+.drag-handle {
+    width: 5px;
+    height: 100%;
+    cursor: ew-resize;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .side-button {
