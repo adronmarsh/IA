@@ -5,3 +5,6 @@ package.json
 /Projects/ChatBot/model
 /Projects/ChatBot2/venv
 /Projects/ChatBot2/chatbot/__pycache__
+/Programacion_de_Inteligencia_Artificial/UD4/icml_face_data.csv
+/Programacion_de_Inteligencia_Artificial/UD4/FacialKeyPoints_weights.hdf5
+/Programacion_de_Inteligencia_Artificial/UD4/FacialExpression_weights.hdf5
