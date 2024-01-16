@@ -57,14 +57,13 @@ body {
     flex-direction: column;
     max-width: calc(100% - 250px);
     height: 100%;
-    /* width: 80%; */
+    width: 80%;
     background-color: var(--chat-container-bg-color);
     border: 1px solid var(--input-border-color);
     border-radius: var(--border-radius);
     overflow: hidden;
     margin-left: 250px;
     width: calc(100% - 250px);
-    /* transition: margin-left 0s; */
 }
 
 #chatbox {
@@ -252,7 +251,7 @@ body {
     box-sizing: border-box;
     border-right: 1px solid #444;
     z-index: 2;
-    resize: horizontal; /* Make the sidebar resizable */
+    resize: horizontal;
     overflow: hidden;
 }
 
