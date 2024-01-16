@@ -1,0 +1,132 @@
+[
+    {
+        "id": "6bb75e8cee7ec0dc",
+        "type": "tab",
+        "label": "Generación automática de datos",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5853736e7babc930",
+        "type": "group",
+        "z": "6bb75e8cee7ec0dc",
+        "name": "Generación automatica de datos",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffefbf",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "9cfddbc6fab77680",
+            "fd1b82c0bb379001",
+            "c3473d36943882d7",
+            "3b3e364e14dd1578",
+            "3189384ff2a5a59e"
+        ],
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+    },
+    {
+        "id": "fd1b82c0bb379001",
+        "type": "inject",
+        "z": "6bb75e8cee7ec0dc",
+        "g": "5853736e7babc930",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "9cfddbc6fab77680"
+            ]
+        ]
+    },
+    {
+        "id": "c3473d36943882d7",
+        "type": "debug",
+        "z": "6bb75e8cee7ec0dc",
+        "g": "5853736e7babc930",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3b3e364e14dd1578",
+        "type": "json",
+        "z": "6bb75e8cee7ec0dc",
+        "g": "5853736e7babc930",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 720,
+        "y": 180,
+        "wires": [
+            [
+                "3189384ff2a5a59e"
+            ]
+        ]
+    },
+    {
+        "id": "3189384ff2a5a59e",
+        "type": "debug",
+        "z": "6bb75e8cee7ec0dc",
+        "g": "5853736e7babc930",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9cfddbc6fab77680",
+        "type": "data-generator",
+        "z": "6bb75e8cee7ec0dc",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n    \"name\": \"{{firstName}} {{lastName}}\",\n    \"work\": \"{{company}}\",\n    \"email\": \"{{email}}\",\n    \"address\": \"{{int 1 100}} {{street}}\",\n    \"country\": \"{{country}}\"\n}",
+        "x": 540,
+        "y": 120,
+        "wires": [
+            [
+                "c3473d36943882d7",
+                "3b3e364e14dd1578"
+            ]
+        ]
+    }
+]

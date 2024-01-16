@@ -1,0 +1,4 @@
+1.- Coger el ejercicio de la semana pasada donde teniamos 2 estaciones meteorologicas que ibamos a juntar datos. Quedarnos con los parametros que media la primera estación.
+Hacer que los valores generados sean aleatorios. Representar tanto los valores instantaneos (Gauge node) como el historico (Chart node) para humedad, no y tempertura creando un dashboard.
+2.- Ej FlightRadar (no funciona)
+3.- Controlar la ejecución de un flujo desde la UI. Este flujo recibira numeros aleatorios que deben representarse con un Gauge Node y Chart Node. 

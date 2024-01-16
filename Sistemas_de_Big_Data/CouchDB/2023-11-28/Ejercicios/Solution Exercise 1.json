@@ -1,0 +1,501 @@
+[
+    {
+        "id": "2f22a3cd.f2c92c",
+        "type": "tab",
+        "label": "Dashboard instantaneous values",
+        "disabled": false,
+        "info": "Modificar ejercicio generador de datos para convertir datos a formato JSON y representar mediante un chart node y un gauge node los valores instantaneos de Temperatura, Humedad y NO."
+    },
+    {
+        "id": "f329f807cc2271e8",
+        "type": "group",
+        "z": "2f22a3cd.f2c92c",
+        "name": "Ejercicio final (Draw instantaneous values)",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#7fb7df",
+            "label": true,
+            "label-position": "n",
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "613e7560a7a98320",
+            "f9ba0ec45f0a28a4",
+            "62acedfa4a9594bc",
+            "768564226e6c989f",
+            "f27299b39c814615",
+            "d2dda81a1c2f3a59",
+            "e2ab23319882518c",
+            "fc351984669a2061",
+            "d7d1154bea76e2f2",
+            "02744c69a17fec1a",
+            "3fbdaebfa5a36440",
+            "c27cf92a6abc97c9",
+            "3f4f5e17ed013907",
+            "741a2337da07b483",
+            "03bab4de091d97f8",
+            "fd3027d667706471"
+        ],
+        "x": 14,
+        "y": 39,
+        "w": 832,
+        "h": 522
+    },
+    {
+        "id": "613e7560a7a98320",
+        "type": "debug",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f9ba0ec45f0a28a4",
+        "type": "inject",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "768564226e6c989f"
+            ]
+        ]
+    },
+    {
+        "id": "62acedfa4a9594bc",
+        "type": "json",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 330,
+        "y": 240,
+        "wires": [
+            [
+                "613e7560a7a98320",
+                "fc351984669a2061",
+                "3fbdaebfa5a36440",
+                "741a2337da07b483"
+            ]
+        ]
+    },
+    {
+        "id": "768564226e6c989f",
+        "type": "function",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "timeConvert",
+        "func": "if ( !msg.timestamp ) msg.timestamp = Math.round(+new Date());\n\nvar dt = new Date(msg.timestamp);\nmsg = {\n\t'month':\tdt.getMonth() + 1,\n\t'day':\t\tdt.getDate(),\n\t'year':\t\tdt.getFullYear(),\n\t'hours':\tdt.getHours(),\n\t'mins':\t\tdt.getMinutes(),\n\t'secs':     dt.getSeconds(),\n\t'msecs':\tdt.getMilliseconds()\n}\n\nif (msg.day < 10){\n    msg.day = '0' + msg.day;\n}\n    \nif (msg.month < 10){\n    msg.month = '0' + msg.month;\n}\n\nif (msg.hours < 10){\n    msg.hours = '0' + msg.hours;\n}\n\nif (msg.mins < 10){\n    msg.mins = '0' + msg.mins;\n}\n\nif (msg.secs < 10){\n    msg.secs = '0' + msg.secs;\n}\n\nmsg.payload = msg.day + '/' + msg.month + '/' + msg.year + ' ' + msg.hours + ':' + msg.mins + ':' + msg.secs;\n//node.warn(msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 140,
+        "wires": [
+            [
+                "f27299b39c814615",
+                "d2dda81a1c2f3a59"
+            ]
+        ]
+    },
+    {
+        "id": "f27299b39c814615",
+        "type": "debug",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d2dda81a1c2f3a59",
+        "type": "data-generator",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n    \"NO\": \"{{float 0.1 49.8}}\",\n    \"NO2\": \"{{float 0.1 49.8}}\",\n    \"NOx\": \"{{float 0.1 49.8}}\",\n    \"SO2\": \"{{float 0.1 49.8}}\",\n    \"Humidity\": \"{{float 0.1 49.8}}\",\n    \"Temperature\": \"{{float 0.1 49.8}}\",\n    \"Wind Speed\": \"{{float 0.1 49.8}}\",\n    \"Wind Direction\": \"{{float 0.1 49.8}}\",\n    \"Date\": \"{{ payload }}\"\n}",
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "62acedfa4a9594bc",
+                "e2ab23319882518c"
+            ]
+        ]
+    },
+    {
+        "id": "fc351984669a2061",
+        "type": "function",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "Draw NO",
+        "func": "\nvar chart_NO = [];\nvar date = msg.payload.Date.split(' ');\n\nchart_NO = [\n    {\n        \"series\": [\"A\"],\n        \"data\": [\n            [\n                {\n                    \"x\": date[1],\n                    \"y\": msg.payload.NO\n                }\n            ]\n        ],\n        \"labels\": [\"\"]\n    }\n];\n\n//msg.payload = chart_NO;\n\nmsg.payload = parseFloat(msg.payload.NO).toFixed(3);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 340,
+        "wires": [
+            [
+                "d7d1154bea76e2f2",
+                "02744c69a17fec1a"
+            ]
+        ]
+    },
+    {
+        "id": "d7d1154bea76e2f2",
+        "type": "ui_chart",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "group": "64882ffa.0a3c9",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Evolution of NO",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 660,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02744c69a17fec1a",
+        "type": "ui_gauge",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "group": "64882ffa.0a3c9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "NO value",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "x": 660,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e2ab23319882518c",
+        "type": "debug",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3fbdaebfa5a36440",
+        "type": "function",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "Draw Humidity",
+        "func": "var date = msg.payload.Date.split(' ');\n\nmsg.payload = parseFloat(msg.payload.Humidity).toFixed(3);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "c27cf92a6abc97c9",
+                "3f4f5e17ed013907"
+            ]
+        ]
+    },
+    {
+        "id": "c27cf92a6abc97c9",
+        "type": "ui_chart",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "group": "b695d6d5.c3db08",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Evolution of Humidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 660,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f4f5e17ed013907",
+        "type": "ui_gauge",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "group": "b695d6d5.c3db08",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity value",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "x": 680,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "741a2337da07b483",
+        "type": "function",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "Draw Temperature",
+        "func": "var date = msg.payload.Date.split(' ');\n\nmsg.payload = parseFloat(msg.payload.Temperature).toFixed(3);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "03bab4de091d97f8",
+                "fd3027d667706471"
+            ]
+        ]
+    },
+    {
+        "id": "03bab4de091d97f8",
+        "type": "ui_chart",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "group": "b0f16f57.d6078",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Evolution of Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 710,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd3027d667706471",
+        "type": "ui_gauge",
+        "z": "2f22a3cd.f2c92c",
+        "g": "f329f807cc2271e8",
+        "name": "",
+        "group": "b0f16f57.d6078",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature value",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "x": 710,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "64882ffa.0a3c9",
+        "type": "ui_group",
+        "name": "NO",
+        "tab": "4572a55c.f43dac",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b695d6d5.c3db08",
+        "type": "ui_group",
+        "name": "Humidity",
+        "tab": "4572a55c.f43dac",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b0f16f57.d6078",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "4572a55c.f43dac",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4572a55c.f43dac",
+        "type": "ui_tab",
+        "name": "Evolution",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

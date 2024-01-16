@@ -1,0 +1,897 @@
+[
+    {
+        "id": "a5f23ff666a32560",
+        "type": "tab",
+        "label": "LOAD / RECOVER DATA",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "02e6f6699675c217",
+        "type": "group",
+        "z": "a5f23ff666a32560",
+        "name": "TCP example",
+        "style": {
+            "stroke": "#777777",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "60278c951c36bc5c",
+            "57b596e008bdfce6",
+            "8bdd61620c4f7bd5",
+            "9afacb98858f7a23",
+            "ad8cd8a3f599be76",
+            "1de8af162a5d5e20"
+        ],
+        "x": 54,
+        "y": 59,
+        "w": 1012,
+        "h": 162
+    },
+    {
+        "id": "6df9203aa4f38f2c",
+        "type": "group",
+        "z": "a5f23ff666a32560",
+        "name": "LOAD CSV TO TABLE",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "36fb1529c6c63170",
+            "819e08e40e12637e",
+            "c5c041f5f4ab418f",
+            "4818fb12fd040d84",
+            "53c92082fac690d3"
+        ],
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+    },
+    {
+        "id": "b8dbf9fd695ad5da",
+        "type": "group",
+        "z": "a5f23ff666a32560",
+        "name": "CREATE JSON / RECOVER PROPERTIES",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "399d671311e8ce28",
+            "b1ef11ebe6aef60d",
+            "184464f175d646bc",
+            "e5da0b7d0bc21c91",
+            "b6b7d75b3f44d29c",
+            "03efb178dc9a33e3"
+        ],
+        "x": 84,
+        "y": 479,
+        "w": 832,
+        "h": 242
+    },
+    {
+        "id": "4776764cadcaf0f2",
+        "type": "group",
+        "z": "a5f23ff666a32560",
+        "name": "ACTIONS OVER A FILE",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "9b635386f1c5d6a1",
+            "f2f148dbcd8d5ec0",
+            "cb4df208ca15c6e6",
+            "a86ec73ef4fe1ad5"
+        ],
+        "x": 74,
+        "y": 779,
+        "w": 1002,
+        "h": 142
+    },
+    {
+        "id": "8340c115544a38a3",
+        "type": "group",
+        "z": "a5f23ff666a32560",
+        "name": "LOAD XML FILE",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "fc479cebdf23f99b",
+            "5be5e0daa11cdff2",
+            "2b338d51da95cf96",
+            "649858b3899df56b",
+            "425fca9ce993496f"
+        ],
+        "x": 94,
+        "y": 959,
+        "w": 772,
+        "h": 202
+    },
+    {
+        "id": "b3e22c6e03bea786",
+        "type": "group",
+        "z": "a5f23ff666a32560",
+        "name": "XML to JSON Object",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "7b0371eeef9a04c3",
+            "041aa812f6d1278b",
+            "ac328f7219052e75",
+            "8bb3625d4f5ab808"
+        ],
+        "x": 114,
+        "y": 1199,
+        "w": 712,
+        "h": 82
+    },
+    {
+        "id": "52f6a7de9064b97c",
+        "type": "group",
+        "z": "a5f23ff666a32560",
+        "name": "JSON Object to XML",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "e57d0895cd0789a4",
+            "c944e1b10d923fc1",
+            "53581578bb6dad1a"
+        ],
+        "x": 174,
+        "y": 1319,
+        "w": 552,
+        "h": 82
+    },
+    {
+        "id": "60278c951c36bc5c",
+        "type": "tcp in",
+        "z": "a5f23ff666a32560",
+        "g": "02e6f6699675c217",
+        "name": "Server holding connections at :1025",
+        "server": "server",
+        "host": "",
+        "port": "1025",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "\\n",
+        "topic": "text",
+        "base64": false,
+        "x": 220,
+        "y": 180,
+        "wires": [
+            [
+                "9afacb98858f7a23"
+            ]
+        ]
+    },
+    {
+        "id": "57b596e008bdfce6",
+        "type": "debug",
+        "z": "a5f23ff666a32560",
+        "g": "02e6f6699675c217",
+        "name": "show incomming text at the debug tab",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8bdd61620c4f7bd5",
+        "type": "inject",
+        "z": "a5f23ff666a32560",
+        "g": "02e6f6699675c217",
+        "name": "button: create a msg",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "Hello from Node-RED server.",
+        "payloadType": "str",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "ad8cd8a3f599be76"
+            ]
+        ]
+    },
+    {
+        "id": "9afacb98858f7a23",
+        "type": "template",
+        "z": "a5f23ff666a32560",
+        "g": "02e6f6699675c217",
+        "name": "TEMPLATE",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "MESSAGE RECEIVED:\n{{payload}}",
+        "x": 530,
+        "y": 180,
+        "wires": [
+            [
+                "57b596e008bdfce6"
+            ]
+        ]
+    },
+    {
+        "id": "ad8cd8a3f599be76",
+        "type": "template",
+        "z": "a5f23ff666a32560",
+        "g": "02e6f6699675c217",
+        "name": "TEMPLATE",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{payload}}\n",
+        "x": 470,
+        "y": 100,
+        "wires": [
+            [
+                "1de8af162a5d5e20"
+            ]
+        ]
+    },
+    {
+        "id": "1de8af162a5d5e20",
+        "type": "tcp out",
+        "z": "a5f23ff666a32560",
+        "g": "02e6f6699675c217",
+        "name": "",
+        "host": "localhost",
+        "port": "1025",
+        "beserver": "client",
+        "base64": false,
+        "end": false,
+        "x": 810,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "819e08e40e12637e",
+        "type": "file in",
+        "z": "a5f23ff666a32560",
+        "g": "6df9203aa4f38f2c",
+        "name": "Read File",
+        "filename": "C:\\Users\\Thor\\Desktop\\node-RED\\samples\\csv\\drinks.csv",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 440,
+        "y": 320,
+        "wires": [
+            [
+                "4818fb12fd040d84",
+                "53c92082fac690d3"
+            ]
+        ]
+    },
+    {
+        "id": "c5c041f5f4ab418f",
+        "type": "inject",
+        "z": "a5f23ff666a32560",
+        "g": "6df9203aa4f38f2c",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 320,
+        "wires": [
+            [
+                "819e08e40e12637e"
+            ]
+        ]
+    },
+    {
+        "id": "4818fb12fd040d84",
+        "type": "csv",
+        "z": "a5f23ff666a32560",
+        "g": "6df9203aa4f38f2c",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\r\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 650,
+        "y": 320,
+        "wires": [
+            [
+                "36fb1529c6c63170"
+            ]
+        ]
+    },
+    {
+        "id": "399d671311e8ce28",
+        "type": "function",
+        "z": "a5f23ff666a32560",
+        "g": "b8dbf9fd695ad5da",
+        "name": "",
+        "func": "var p=JSON.parse(msg.payload);\n//p=msg.payload;\nnode.log(typeof p);\nmsg.payload=p.temp;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 680,
+        "wires": [
+            [
+                "b1ef11ebe6aef60d"
+            ]
+        ]
+    },
+    {
+        "id": "b1ef11ebe6aef60d",
+        "type": "debug",
+        "z": "a5f23ff666a32560",
+        "g": "b8dbf9fd695ad5da",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 800,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "184464f175d646bc",
+        "type": "json",
+        "z": "a5f23ff666a32560",
+        "g": "b8dbf9fd695ad5da",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 400,
+        "y": 600,
+        "wires": [
+            [
+                "399d671311e8ce28"
+            ]
+        ]
+    },
+    {
+        "id": "e5da0b7d0bc21c91",
+        "type": "inject",
+        "z": "a5f23ff666a32560",
+        "g": "b8dbf9fd695ad5da",
+        "name": "JSON DATA",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"topic\":\"test/s1\",\"temp\":20}",
+        "payloadType": "json",
+        "x": 200,
+        "y": 680,
+        "wires": [
+            [
+                "399d671311e8ce28"
+            ]
+        ]
+    },
+    {
+        "id": "b6b7d75b3f44d29c",
+        "type": "function",
+        "z": "a5f23ff666a32560",
+        "g": "b8dbf9fd695ad5da",
+        "name": "Create Json",
+        "func": "var data={\"temp\":30,\"humidity\":80};\nnode.log(typeof data);\n//msg.payload= JSON.stringify(data);\nmsg.payload= data;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 520,
+        "wires": [
+            [
+                "b1ef11ebe6aef60d",
+                "184464f175d646bc"
+            ]
+        ]
+    },
+    {
+        "id": "03efb178dc9a33e3",
+        "type": "inject",
+        "z": "a5f23ff666a32560",
+        "g": "b8dbf9fd695ad5da",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 520,
+        "wires": [
+            [
+                "b6b7d75b3f44d29c"
+            ]
+        ]
+    },
+    {
+        "id": "9b635386f1c5d6a1",
+        "type": "inject",
+        "z": "a5f23ff666a32560",
+        "g": "4776764cadcaf0f2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 820,
+        "wires": [
+            [
+                "f2f148dbcd8d5ec0"
+            ]
+        ]
+    },
+    {
+        "id": "f2f148dbcd8d5ec0",
+        "type": "file",
+        "z": "a5f23ff666a32560",
+        "g": "4776764cadcaf0f2",
+        "name": "",
+        "filename": "C:\\Users\\Thor\\Desktop\\node-RED\\samples\\actions_file\\test.log",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 820,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb4df208ca15c6e6",
+        "type": "file",
+        "z": "a5f23ff666a32560",
+        "g": "4776764cadcaf0f2",
+        "name": "",
+        "filename": "C:\\Users\\Thor\\Desktop\\node-RED\\samples\\actions_file\\test.log",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "delete",
+        "x": 670,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a86ec73ef4fe1ad5",
+        "type": "inject",
+        "z": "a5f23ff666a32560",
+        "g": "4776764cadcaf0f2",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 880,
+        "wires": [
+            [
+                "cb4df208ca15c6e6"
+            ]
+        ]
+    },
+    {
+        "id": "53c92082fac690d3",
+        "type": "debug",
+        "z": "a5f23ff666a32560",
+        "g": "6df9203aa4f38f2c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "fc479cebdf23f99b",
+        "type": "file in",
+        "z": "a5f23ff666a32560",
+        "g": "8340c115544a38a3",
+        "name": "xml file",
+        "filename": "C:\\Users\\Thor\\Desktop\\node-RED\\samples\\xml\\sample01.xml",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 380,
+        "y": 1000,
+        "wires": [
+            [
+                "5be5e0daa11cdff2",
+                "425fca9ce993496f"
+            ]
+        ]
+    },
+    {
+        "id": "5be5e0daa11cdff2",
+        "type": "xml",
+        "z": "a5f23ff666a32560",
+        "g": "8340c115544a38a3",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 570,
+        "y": 1000,
+        "wires": [
+            [
+                "2b338d51da95cf96"
+            ]
+        ]
+    },
+    {
+        "id": "2b338d51da95cf96",
+        "type": "debug",
+        "z": "a5f23ff666a32560",
+        "g": "8340c115544a38a3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 750,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "649858b3899df56b",
+        "type": "inject",
+        "z": "a5f23ff666a32560",
+        "g": "8340c115544a38a3",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1000,
+        "wires": [
+            [
+                "fc479cebdf23f99b"
+            ]
+        ]
+    },
+    {
+        "id": "425fca9ce993496f",
+        "type": "debug",
+        "z": "a5f23ff666a32560",
+        "g": "8340c115544a38a3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 620,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "7b0371eeef9a04c3",
+        "type": "inject",
+        "z": "a5f23ff666a32560",
+        "g": "b3e22c6e03bea786",
+        "name": "XML String",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 1240,
+        "wires": [
+            [
+                "ac328f7219052e75"
+            ]
+        ]
+    },
+    {
+        "id": "041aa812f6d1278b",
+        "type": "debug",
+        "z": "a5f23ff666a32560",
+        "g": "b3e22c6e03bea786",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 710,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "e57d0895cd0789a4",
+        "type": "inject",
+        "z": "a5f23ff666a32560",
+        "g": "52f6a7de9064b97c",
+        "name": "Object",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"note\":{\"$\":{\"priority\":\"high\"},\"to\":[\"Nick\"],\"from\":[\"Dave\"],\"heading\":[\"Reminder\"],\"body\":[\"Update the website\"]}}",
+        "payloadType": "json",
+        "x": 270,
+        "y": 1360,
+        "wires": [
+            [
+                "53581578bb6dad1a"
+            ]
+        ]
+    },
+    {
+        "id": "c944e1b10d923fc1",
+        "type": "debug",
+        "z": "a5f23ff666a32560",
+        "g": "52f6a7de9064b97c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 610,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "ac328f7219052e75",
+        "type": "template",
+        "z": "a5f23ff666a32560",
+        "g": "b3e22c6e03bea786",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "text",
+        "syntax": "plain",
+        "template": "<note priority=\"high\">\n  <to>Nick</to>\n  <from>Dave</from>\n  <heading>Reminder</heading>\n  <body>Update the website</body>\n</note>",
+        "output": "str",
+        "x": 400,
+        "y": 1240,
+        "wires": [
+            [
+                "8bb3625d4f5ab808"
+            ]
+        ]
+    },
+    {
+        "id": "8bb3625d4f5ab808",
+        "type": "xml",
+        "z": "a5f23ff666a32560",
+        "g": "b3e22c6e03bea786",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 550,
+        "y": 1240,
+        "wires": [
+            [
+                "041aa812f6d1278b"
+            ]
+        ]
+    },
+    {
+        "id": "53581578bb6dad1a",
+        "type": "xml",
+        "z": "a5f23ff666a32560",
+        "g": "52f6a7de9064b97c",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 430,
+        "y": 1360,
+        "wires": [
+            [
+                "c944e1b10d923fc1"
+            ]
+        ]
+    },
+    {
+        "id": "36fb1529c6c63170",
+        "type": "ui_table",
+        "z": "a5f23ff666a32560",
+        "group": "8a58a152bd68fa97",
+        "name": "test",
+        "order": 11,
+        "width": "14",
+        "height": "12",
+        "columns": [
+            {
+                "field": "country",
+                "title": "Country",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "beer_servings",
+                "title": "Beer",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "spirit_servings",
+                "title": "Spirit",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 830,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8a58a152bd68fa97",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "dae44e60e785c691",
+        "order": 1,
+        "disp": true,
+        "width": "14",
+        "collapse": false
+    },
+    {
+        "id": "dae44e60e785c691",
+        "type": "ui_tab",
+        "name": "LOAD / RECOVER DATA",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]

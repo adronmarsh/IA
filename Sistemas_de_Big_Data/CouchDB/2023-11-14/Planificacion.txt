@@ -1,0 +1,16 @@
+Ya han visto la instalación de Docker con Fidel por tanto falta ver cosas más de uso diario.
+
+Crear contenedor node-red
+
+Preparar contenedor node-RED para que tenga los paquetes y flujos que pueda necesitar esa instancia
+
+Levantar contenedores con docker-compose
+
+Contenedores con docker-compose haciendo un build de la imagen al vuelo
+
+Ejemplo docker file para dockerizar una aplicación
+
+Explicar diferencia entre trabajar con docker en Windows y Linux
+
+COmo se expone el API de Docker?
+

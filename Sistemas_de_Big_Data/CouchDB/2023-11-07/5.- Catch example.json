@@ -1,0 +1,196 @@
+[
+    {
+        "id": "bec8b911dfa7678f",
+        "type": "tab",
+        "label": "Catch example",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fba961e615274538",
+        "type": "group",
+        "z": "bec8b911dfa7678f",
+        "name": "Manage exceptions",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#ffbfbf",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "1f0b7a8509f7a94d",
+            "4bec754f082905f9",
+            "b81d64b4acdd7b4e",
+            "6b4a778cb92b904e",
+            "c4780340cccda219",
+            "8ac2e5b4dca6750a"
+        ],
+        "x": 54,
+        "y": 39,
+        "w": 952,
+        "h": 162
+    },
+    {
+        "id": "1f0b7a8509f7a94d",
+        "type": "inject",
+        "z": "bec8b911dfa7678f",
+        "g": "fba961e615274538",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "Cause an error",
+        "payloadType": "str",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "b81d64b4acdd7b4e"
+            ]
+        ]
+    },
+    {
+        "id": "4bec754f082905f9",
+        "type": "function",
+        "z": "bec8b911dfa7678f",
+        "g": "fba961e615274538",
+        "name": "Display status",
+        "func": "// check to see if status should be cleared\nif (msg.topic == \"clear\") {\n    // YES so clear status and exit without sending a msg.\n    node.status({});\n    return;\n} else {\n    // NO, set status, msg.topis and return msg\n    node.status({fill:\"red\",shape:\"dot\",text:\"ERROR\"});\n    msg.topic = \"Logging flow\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 160,
+        "wires": [
+            [
+                "8ac2e5b4dca6750a"
+            ]
+        ]
+    },
+    {
+        "id": "b81d64b4acdd7b4e",
+        "type": "function",
+        "z": "bec8b911dfa7678f",
+        "g": "fba961e615274538",
+        "name": "This will throw an error",
+        "func": "var n = 23 + 56 / a;\n//var n = 23 + 56 ;\nmsg.payload = n;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 1,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 80,
+        "wires": [
+            [
+                "6b4a778cb92b904e"
+            ]
+        ]
+    },
+    {
+        "id": "6b4a778cb92b904e",
+        "type": "debug",
+        "z": "bec8b911dfa7678f",
+        "g": "fba961e615274538",
+        "name": "",
+        "active": true,
+        "console": false,
+        "complete": "true",
+        "x": 910,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f11449e71f32d55a",
+        "type": "delay",
+        "z": "bec8b911dfa7678f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "70460ed4cdbd0404"
+            ]
+        ]
+    },
+    {
+        "id": "70460ed4cdbd0404",
+        "type": "change",
+        "z": "bec8b911dfa7678f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "clear",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4780340cccda219",
+        "type": "catch",
+        "z": "bec8b911dfa7678f",
+        "g": "fba961e615274538",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "4bec754f082905f9"
+            ]
+        ]
+    },
+    {
+        "id": "8ac2e5b4dca6750a",
+        "type": "debug",
+        "z": "bec8b911dfa7678f",
+        "g": "fba961e615274538",
+        "name": "",
+        "active": true,
+        "console": false,
+        "complete": "true",
+        "x": 910,
+        "y": 160,
+        "wires": []
+    }
+]

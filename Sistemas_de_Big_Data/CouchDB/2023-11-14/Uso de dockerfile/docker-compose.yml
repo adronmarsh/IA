@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+
+  # API 
+  api:
+    restart: always
+    container_name: api
+    build: ./folder/
+    ports:
+      - "8010:8010"
+    expose:
+      - "8010"
+    volumes:
+      - ./folder/data:/folder/data

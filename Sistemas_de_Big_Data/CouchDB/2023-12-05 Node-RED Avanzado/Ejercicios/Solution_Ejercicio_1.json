@@ -1,0 +1,700 @@
+[
+    {
+        "id": "98859c2b1c858e8c",
+        "type": "tab",
+        "label": "Join two data sets",
+        "disabled": false,
+        "info": "Vamos a simular dos conjuntos de datos.\n\nPrimero tendra:\n\nNO, NO2, NOx, SO2, Humidity, Temperature, Wind_Speed, Wind_Direction.\n\nEl segundo tendra CO y CO2. \n\nAmbos conjuntos tendran un campo Date que será el input del payload.\n\nTenemos que juntar ambos conjuntos de datos en uno solo usando el nodo join  y aplicando lo que hemos visto."
+    },
+    {
+        "id": "8ffeac41a87a7154",
+        "type": "inject",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "test",
+        "payloadType": "date",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "233aafa915ee5f10"
+            ]
+        ]
+    },
+    {
+        "id": "233aafa915ee5f10",
+        "type": "function",
+        "z": "98859c2b1c858e8c",
+        "name": "timeConvert",
+        "func": "if ( !msg.timestamp ) msg.timestamp = Math.round(+new Date());\n\nvar dt = new Date(msg.timestamp);\nmsg = {\n\t'month':\tdt.getMonth() + 1,\n\t'day':\t\tdt.getDate(),\n\t'year':\t\tdt.getFullYear(),\n\t'hours':\tdt.getHours(),\n\t'mins':\t\tdt.getMinutes(),\n\t'secs':     dt.getSeconds(),\n\t'msecs':\tdt.getMilliseconds()\n}\n\nif (msg.day < 10){\n    msg.day = '0' + msg.day;\n}\n    \nif (msg.month < 10){\n    msg.month = '0' + msg.month;\n}\n\nif (msg.hours < 10){\n    msg.hours = '0' + msg.hours;\n}\n\nif (msg.mins < 10){\n    msg.mins = '0' + msg.mins;\n}\n\nif (msg.secs < 10){\n    msg.secs = '0' + msg.secs;\n}\n\nmsg.payload = msg.day + '/' + msg.month + '/' + msg.year + ' ' + msg.hours + ':' + msg.mins + ':' + msg.secs;\n//node.warn(msg.payload);\nmsg.topic = \"TEST_1\";\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "4c1dc6ed54316a50",
+                "818395ddba5a032d",
+                "cc56337000c9baf2",
+                "a853e73ea26fc7e5"
+            ]
+        ]
+    },
+    {
+        "id": "4c1dc6ed54316a50",
+        "type": "data-generator",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "json",
+        "template": "{\n    \"NO\": {{float 0.1 49.8}},\n    \"NO2\": {{float 0.1 49.8}},\n    \"NOx\": {{float 0.1 49.8}},\n    \"SO2\": {{float 0.1 49.8}},\n    \"Humidity\": {{float 0.1 49.8}},\n    \"Temperature\": {{float 0.1 49.8}},\n    \"Wind_Speed\": {{float 0.1 49.8}},\n    \"Wind_Direction\": {{float 0.1 49.8}},\n    \"Date\": \"{{payload}}\"\n}",
+        "x": 540,
+        "y": 80,
+        "wires": [
+            [
+                "11c4f1f828102af6",
+                "7980b4d5adf6bbfc"
+            ]
+        ]
+    },
+    {
+        "id": "cc56337000c9baf2",
+        "type": "data-generator",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "json",
+        "template": "{\n    \"CO\": {{float 0.1 49.8}},\n    \"CO2\": {{float 0.1 49.8}},\n    \"Date\": \"{{ payload }}\"\n}",
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "1e582b73d6890d55"
+            ]
+        ]
+    },
+    {
+        "id": "818395ddba5a032d",
+        "type": "debug",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "a853e73ea26fc7e5",
+        "type": "debug",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "11c4f1f828102af6",
+        "type": "debug",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "56ad1528cdccb25a",
+        "type": "change",
+        "z": "98859c2b1c858e8c",
+        "name": "parts.index = 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "parts.index",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 420,
+        "wires": [
+            [
+                "2aff7ee5f75e52c7"
+            ]
+        ]
+    },
+    {
+        "id": "b7c1ea221c0440ba",
+        "type": "join",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "mode": "auto",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 610,
+        "y": 380,
+        "wires": [
+            [
+                "7ce4de87badfca5c",
+                "adef6c9b7c70a99f"
+            ]
+        ]
+    },
+    {
+        "id": "91925619b27c94fa",
+        "type": "change",
+        "z": "98859c2b1c858e8c",
+        "name": "parts.index = 0",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.NO",
+                "pt": "msg",
+                "to": "payload[0].NO",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.CO",
+                "pt": "msg",
+                "to": "payload[1].CO",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 360,
+        "wires": [
+            [
+                "2aff7ee5f75e52c7"
+            ]
+        ]
+    },
+    {
+        "id": "7ce4de87badfca5c",
+        "type": "debug",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 770,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "2aff7ee5f75e52c7",
+        "type": "change",
+        "z": "98859c2b1c858e8c",
+        "name": "group id and count",
+        "rules": [
+            {
+                "t": "set",
+                "p": "parts.id",
+                "pt": "msg",
+                "to": "mygroup",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "parts.count",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [
+                "b7c1ea221c0440ba"
+            ]
+        ]
+    },
+    {
+        "id": "adef6c9b7c70a99f",
+        "type": "function",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "func": "msg.payload = {\n    \"NO\": msg.payload[0].NO,\n    \"NO2\": msg.payload[0].NO2,\n    \"NOx\": msg.payload[0].NOx,\n    \"SO2\": msg.payload[0].SO2,\n    \"Humidity\": msg.payload[0].Humidity,\n    \"Temperature\": msg.payload[0].Temperature,\n    \"Wind_Speed\": msg.payload[0].Wind_Speed,\n    \"Wind_Direction\": msg.payload[0].NO,\n    \"CO\": msg.payload[1].CO,\n    \"CO2\": msg.payload[1].CO2\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 380,
+        "wires": [
+            [
+                "865ed97401849ce0"
+            ]
+        ]
+    },
+    {
+        "id": "865ed97401849ce0",
+        "type": "debug",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "6bedd48812897ccf",
+        "type": "link in",
+        "z": "98859c2b1c858e8c",
+        "name": "part_0",
+        "links": [
+            "7980b4d5adf6bbfc",
+            "e1e64f1faaf801fb"
+        ],
+        "x": 75,
+        "y": 360,
+        "wires": [
+            [
+                "91925619b27c94fa"
+            ]
+        ]
+    },
+    {
+        "id": "908ec2379172d01b",
+        "type": "link in",
+        "z": "98859c2b1c858e8c",
+        "name": "part_1",
+        "links": [
+            "1e582b73d6890d55",
+            "503f765a5ed2966c"
+        ],
+        "x": 75,
+        "y": 420,
+        "wires": [
+            [
+                "56ad1528cdccb25a"
+            ]
+        ]
+    },
+    {
+        "id": "7980b4d5adf6bbfc",
+        "type": "link out",
+        "z": "98859c2b1c858e8c",
+        "name": "part_0",
+        "links": [
+            "6bedd48812897ccf"
+        ],
+        "x": 695,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "1e582b73d6890d55",
+        "type": "link out",
+        "z": "98859c2b1c858e8c",
+        "name": "part_1",
+        "links": [
+            "908ec2379172d01b"
+        ],
+        "x": 695,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8ccddb9a.a55f38",
+        "type": "inject",
+        "z": "98859c2b1c858e8c",
+        "name": "temperature",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "temperature",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "47b769c5.cb0e28"
+            ]
+        ]
+    },
+    {
+        "id": "47b769c5.cb0e28",
+        "type": "join",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 370,
+        "y": 600,
+        "wires": [
+            [
+                "f9afb265.b11b7"
+            ]
+        ]
+    },
+    {
+        "id": "f9afb265.b11b7",
+        "type": "debug",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 530,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2d269127.4f04ce",
+        "type": "inject",
+        "z": "98859c2b1c858e8c",
+        "name": "humidity",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "humidity",
+        "payload": "7",
+        "payloadType": "num",
+        "x": 160,
+        "y": 600,
+        "wires": [
+            [
+                "47b769c5.cb0e28"
+            ]
+        ]
+    },
+    {
+        "id": "d6fbe805.0e4628",
+        "type": "inject",
+        "z": "98859c2b1c858e8c",
+        "name": "pressure",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "pressure",
+        "payload": "999",
+        "payloadType": "num",
+        "x": 160,
+        "y": 640,
+        "wires": [
+            [
+                "47b769c5.cb0e28"
+            ]
+        ]
+    },
+    {
+        "id": "5f75a7cbe2dac7ee",
+        "type": "inject",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "test",
+        "payloadType": "date",
+        "x": 120,
+        "y": 840,
+        "wires": [
+            [
+                "208987569b1af932"
+            ]
+        ]
+    },
+    {
+        "id": "208987569b1af932",
+        "type": "function",
+        "z": "98859c2b1c858e8c",
+        "name": "timeConvert",
+        "func": "if ( !msg.timestamp ) msg.timestamp = Math.round(+new Date());\n\nvar dt = new Date(msg.timestamp);\nmsg = {\n\t'month':\tdt.getMonth() + 1,\n\t'day':\t\tdt.getDate(),\n\t'year':\t\tdt.getFullYear(),\n\t'hours':\tdt.getHours(),\n\t'mins':\t\tdt.getMinutes(),\n\t'secs':     dt.getSeconds(),\n\t'msecs':\tdt.getMilliseconds()\n}\n\nif (msg.day < 10){\n    msg.day = '0' + msg.day;\n}\n    \nif (msg.month < 10){\n    msg.month = '0' + msg.month;\n}\n\nif (msg.hours < 10){\n    msg.hours = '0' + msg.hours;\n}\n\nif (msg.mins < 10){\n    msg.mins = '0' + msg.mins;\n}\n\nif (msg.secs < 10){\n    msg.secs = '0' + msg.secs;\n}\n\nmsg.payload = msg.day + '/' + msg.month + '/' + msg.year + ' ' + msg.hours + ':' + msg.mins + ':' + msg.secs;\n//node.warn(msg.payload);\nmsg.topic = \"TEST_1\";\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 840,
+        "wires": [
+            [
+                "5a18e3f3b28b1287",
+                "feb09450645041ee",
+                "6b1e2c8aeb60889b",
+                "619830233df222be"
+            ]
+        ]
+    },
+    {
+        "id": "5a18e3f3b28b1287",
+        "type": "data-generator",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "json",
+        "template": "{\n    \"NO\": {{float 0.1 49.8}},\n    \"NO2\": {{float 0.1 49.8}},\n    \"NOx\": {{float 0.1 49.8}},\n    \"SO2\": {{float 0.1 49.8}},\n    \"Humidity\": {{float 0.1 49.8}},\n    \"Temperature\": {{float 0.1 49.8}},\n    \"Wind_Speed\": {{float 0.1 49.8}},\n    \"Wind_Direction\": {{float 0.1 49.8}},\n    \"Date\": \"{{payload}}\"\n}",
+        "x": 520,
+        "y": 780,
+        "wires": [
+            [
+                "e18b0d20c94c009f"
+            ]
+        ]
+    },
+    {
+        "id": "6b1e2c8aeb60889b",
+        "type": "data-generator",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "json",
+        "template": "{\n    \"CO\": {{float 0.1 49.8}},\n    \"CO2\": {{float 0.1 49.8}},\n    \"Date\": \"{{ payload }}\"\n}",
+        "x": 520,
+        "y": 900,
+        "wires": [
+            [
+                "d0aada9c30f495ad"
+            ]
+        ]
+    },
+    {
+        "id": "feb09450645041ee",
+        "type": "debug",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "619830233df222be",
+        "type": "debug",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "e18b0d20c94c009f",
+        "type": "function",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "func": "msg.topic = 'Parte 1';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 780,
+        "wires": [
+            [
+                "5ee3766393e99e37"
+            ]
+        ]
+    },
+    {
+        "id": "d0aada9c30f495ad",
+        "type": "function",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "func": "msg.topic = 'Parte 2';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 900,
+        "wires": [
+            [
+                "5ee3766393e99e37"
+            ]
+        ]
+    },
+    {
+        "id": "5ee3766393e99e37",
+        "type": "join",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 870,
+        "y": 840,
+        "wires": [
+            [
+                "c278e8bd1cbfed9a"
+            ]
+        ]
+    },
+    {
+        "id": "c278e8bd1cbfed9a",
+        "type": "debug",
+        "z": "98859c2b1c858e8c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1040,
+        "wires": []
+    }
+]

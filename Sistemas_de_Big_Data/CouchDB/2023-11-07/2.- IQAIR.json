@@ -1,0 +1,575 @@
+[
+    {
+        "id": "b2b42db653f1738c",
+        "type": "tab",
+        "label": "IQAIR",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "9358cdc3ae26445d",
+        "type": "inject",
+        "z": "b2b42db653f1738c",
+        "name": "Call API REST",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "def332969de0258b"
+            ]
+        ]
+    },
+    {
+        "id": "def332969de0258b",
+        "type": "http request",
+        "z": "b2b42db653f1738c",
+        "name": "List supported countries",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.airvisual.com/v2/countries?key=73ae6f8a-c7ea-41ba-b660-c47ef930e953",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "credentials": {},
+        "x": 430,
+        "y": 60,
+        "wires": [
+            [
+                "128361754ef6b4b5"
+            ]
+        ]
+    },
+    {
+        "id": "128361754ef6b4b5",
+        "type": "debug",
+        "z": "b2b42db653f1738c",
+        "name": "List of countries",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 720,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e8f0174603dd49ab",
+        "type": "inject",
+        "z": "b2b42db653f1738c",
+        "name": "Call API REST",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "03eeab5148e71463"
+            ]
+        ]
+    },
+    {
+        "id": "03eeab5148e71463",
+        "type": "http request",
+        "z": "b2b42db653f1738c",
+        "name": "Get nearest city data (IP Geolocation)",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.airvisual.com/v2/nearest_city?key=73ae6f8a-c7ea-41ba-b660-c47ef930e953",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "credentials": {},
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "5c7d159b5ceaf3f5"
+            ]
+        ]
+    },
+    {
+        "id": "5c7d159b5ceaf3f5",
+        "type": "debug",
+        "z": "b2b42db653f1738c",
+        "name": "Get Nearest city (IP Geolocation)",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 820,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "490faf140297ccf0",
+        "type": "inject",
+        "z": "b2b42db653f1738c",
+        "name": "Call API REST",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "ded9dfe51f9c29d0"
+            ]
+        ]
+    },
+    {
+        "id": "ded9dfe51f9c29d0",
+        "type": "http request",
+        "z": "b2b42db653f1738c",
+        "name": "Get nearest city data (GPS coordinates)",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.airvisual.com/v2/nearest_city?lat=43.5453&lon=-5.6619&key=73ae6f8a-c7ea-41ba-b660-c47ef930e953",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "013c6e7e12a8375f"
+            ]
+        ]
+    },
+    {
+        "id": "013c6e7e12a8375f",
+        "type": "debug",
+        "z": "b2b42db653f1738c",
+        "name": "Get Nearest city (coordinates)",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 850,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "dfdff0ddf9b0aa0c",
+        "type": "inject",
+        "z": "b2b42db653f1738c",
+        "name": "Call API REST",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "412b9d8c6a7bace3"
+            ]
+        ]
+    },
+    {
+        "id": "412b9d8c6a7bace3",
+        "type": "http request",
+        "z": "b2b42db653f1738c",
+        "name": "Get specified city data",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.airvisual.com/v2/city?city=Gijon&state=Asturias&country=Spain&key=73ae6f8a-c7ea-41ba-b660-c47ef930e953",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "4e0d3f290f9b631d"
+            ]
+        ]
+    },
+    {
+        "id": "4e0d3f290f9b631d",
+        "type": "debug",
+        "z": "b2b42db653f1738c",
+        "name": "Get specified city data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 820,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "36ee288342c8eb2f",
+        "type": "inject",
+        "z": "b2b42db653f1738c",
+        "name": "Call API REST",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "22d5b4f74e51b56e"
+            ]
+        ]
+    },
+    {
+        "id": "22d5b4f74e51b56e",
+        "type": "http request",
+        "z": "b2b42db653f1738c",
+        "name": "Get List supported stations in a city",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.airvisual.com/v2/stations?city=Gijon&state=Asturias&country=Spain&key=73ae6f8a-c7ea-41ba-b660-c47ef930e953",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "0664ada25a20378e"
+            ]
+        ]
+    },
+    {
+        "id": "0664ada25a20378e",
+        "type": "debug",
+        "z": "b2b42db653f1738c",
+        "name": "List of supported stations in a city",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 860,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "504b2d2a118dca55",
+        "type": "inject",
+        "z": "b2b42db653f1738c",
+        "name": "Call API REST",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "edcffb02f12646bc"
+            ]
+        ]
+    },
+    {
+        "id": "edcffb02f12646bc",
+        "type": "http request",
+        "z": "b2b42db653f1738c",
+        "name": "Get nearest station data (IP Geolocation)",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.airvisual.com/v2/nearest_station?key=73ae6f8a-c7ea-41ba-b660-c47ef930e953",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 460,
+        "y": 460,
+        "wires": [
+            [
+                "f61874b5d0759b8c"
+            ]
+        ]
+    },
+    {
+        "id": "f61874b5d0759b8c",
+        "type": "debug",
+        "z": "b2b42db653f1738c",
+        "name": "Get nearest station data (IP Geolocation)",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 860,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ee5c126211fba62a",
+        "type": "inject",
+        "z": "b2b42db653f1738c",
+        "name": "Call API REST",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "ede6ad0657877e9c"
+            ]
+        ]
+    },
+    {
+        "id": "ede6ad0657877e9c",
+        "type": "http request",
+        "z": "b2b42db653f1738c",
+        "name": "Get nearest station data (GPS coordinates)",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.airvisual.com/v2/nearest_station?lat=43.5351&lon=-5.65833&key=73ae6f8a-c7ea-41ba-b660-c47ef930e953",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 470,
+        "y": 540,
+        "wires": [
+            [
+                "8d4bc6512ad53927"
+            ]
+        ]
+    },
+    {
+        "id": "8d4bc6512ad53927",
+        "type": "debug",
+        "z": "b2b42db653f1738c",
+        "name": "Get specified city data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 800,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a935a28e168ad425",
+        "type": "inject",
+        "z": "b2b42db653f1738c",
+        "name": "Call API REST",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "8efc3f9ca6fde7ee"
+            ]
+        ]
+    },
+    {
+        "id": "8efc3f9ca6fde7ee",
+        "type": "http request",
+        "z": "b2b42db653f1738c",
+        "name": "Get specified station data",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.airvisual.com/v2/station?station=Argentina&city=Gijon&state=Asturias&country=Spain&key=73ae6f8a-c7ea-41ba-b660-c47ef930e953",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 410,
+        "y": 620,
+        "wires": [
+            [
+                "d6fde9e06e01722b"
+            ]
+        ]
+    },
+    {
+        "id": "d6fde9e06e01722b",
+        "type": "debug",
+        "z": "b2b42db653f1738c",
+        "name": "Get specified station data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 810,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "74b94bdf97293b6d",
+        "type": "comment",
+        "z": "b2b42db653f1738c",
+        "name": "Permission denied (You don't have access to this endpoint)",
+        "info": "",
+        "x": 470,
+        "y": 343,
+        "wires": []
+    },
+    {
+        "id": "d4d075ecd1df260f",
+        "type": "comment",
+        "z": "b2b42db653f1738c",
+        "name": "Permission denied (You don't have access to this endpoint)",
+        "info": "",
+        "x": 450,
+        "y": 425,
+        "wires": []
+    },
+    {
+        "id": "9913577e397f530e",
+        "type": "comment",
+        "z": "b2b42db653f1738c",
+        "name": "Permission denied (You don't have access to this endpoint)",
+        "info": "",
+        "x": 450,
+        "y": 503,
+        "wires": []
+    },
+    {
+        "id": "b7fc23151e1f5c6b",
+        "type": "comment",
+        "z": "b2b42db653f1738c",
+        "name": "Permission denied (You don't have access to this endpoint)",
+        "info": "",
+        "x": 450,
+        "y": 583,
+        "wires": []
+    },
+    {
+        "id": "030c62b9055a02af",
+        "type": "inject",
+        "z": "b2b42db653f1738c",
+        "name": "Call API REST",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "188c7ca32a613fe7"
+            ]
+        ]
+    },
+    {
+        "id": "188c7ca32a613fe7",
+        "type": "http request",
+        "z": "b2b42db653f1738c",
+        "name": "Get global city ranking",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.airvisual.com/v2/city_ranking?key=73ae6f8a-c7ea-41ba-b660-c47ef930e953",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 400,
+        "y": 700,
+        "wires": [
+            [
+                "686bd5dd0ced1eb8"
+            ]
+        ]
+    },
+    {
+        "id": "686bd5dd0ced1eb8",
+        "type": "debug",
+        "z": "b2b42db653f1738c",
+        "name": "Get global city ranking",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 800,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "3aed1960870ade0f",
+        "type": "comment",
+        "z": "b2b42db653f1738c",
+        "name": "Permission denied (You don't have access to this endpoint)",
+        "info": "",
+        "x": 450,
+        "y": 662,
+        "wires": []
+    },
+    {
+        "id": "a0833256c18a99fe",
+        "type": "comment",
+        "z": "b2b42db653f1738c",
+        "name": "Test sobre iqair",
+        "info": "https://www.iqair.com/air-pollution-data-api",
+        "x": 1140,
+        "y": 60,
+        "wires": []
+    }
+]

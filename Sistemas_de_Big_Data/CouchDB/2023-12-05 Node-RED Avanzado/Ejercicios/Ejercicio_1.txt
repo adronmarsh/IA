@@ -1,0 +1,14 @@
+Imaginar que tenemos 2 estaciones meteorologicas.
+
+Ambas comunican sus datos de forma independiente. Pero, se quieren insertar en el mismo JSON en nuestra BB.DD. pues son del mismo instante de tiempo.
+¿Como lo hariamos?
+
+La primera estación tendra:
+
+NO, NO2, NOx, SO2, Humidity, Temperature, Wind_Speed, Wind_Direction.
+
+La segunda estación tendra: CO y CO2. 
+
+Ambos conjuntos tendran un campo Date que será el input del payload.
+
+Tenemos que juntar ambos conjuntos de datos en uno solo usando el nodo join  y aplicando lo que hemos visto.

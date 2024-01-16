@@ -1,0 +1,86 @@
+[
+    {
+        "id": "ece54e72fd2eb599",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "996ee1bea68295cf",
+        "type": "inject",
+        "z": "ece54e72fd2eb599",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "c590ae1ff71faae3"
+            ]
+        ]
+    },
+    {
+        "id": "c590ae1ff71faae3",
+        "type": "ui_worldmap",
+        "z": "ece54e72fd2eb599",
+        "group": "5a647fd07ff27317",
+        "order": 1,
+        "width": 21,
+        "height": 12,
+        "name": "",
+        "lat": "39.4893100",
+        "lon": "-0.4816300",
+        "zoom": "10",
+        "layer": "",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "path": "/worldmap",
+        "x": 500,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "5a647fd07ff27317",
+        "type": "ui_group",
+        "name": "worldmap",
+        "tab": "be30572d7b7955b6",
+        "order": 1,
+        "disp": true,
+        "width": "21",
+        "collapse": false
+    },
+    {
+        "id": "be30572d7b7955b6",
+        "type": "ui_tab",
+        "name": "FlightRadar",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    }
+]

@@ -1,0 +1,393 @@
+[
+    {
+        "id": "6a241393e74ad44e",
+        "type": "tab",
+        "label": "Exercise FlightRadar24",
+        "disabled": false,
+        "info": "- Uso del nodo FlighRadar24 para empezar a recibir datos.\n\nPoder controlar su puesta en marcha / parado haciendo uso de variables de flujo.\n\n- Guardar en un fichero en disco los datos para las siguientes condiciones:\n - origin == \"BCN\" && destination == \"VLC\" || destination == \"MAD\""
+    },
+    {
+        "id": "7781bbb181c78d84",
+        "type": "group",
+        "z": "6a241393e74ad44e",
+        "name": "Write to file filtering by destination and origin",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffdf7f",
+            "label": true,
+            "label-position": "n",
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "7458e6fe133fb70d",
+            "458e230441294aa9",
+            "2be86562804c7eff",
+            "23c14b3dbdb3c657",
+            "7e00643e76d88a8c",
+            "ebb79ea4125ef65c",
+            "cc8bf578f34a90fc"
+        ],
+        "x": 74,
+        "y": 319,
+        "w": 872,
+        "h": 282
+    },
+    {
+        "id": "95312c4d5f221015",
+        "type": "group",
+        "z": "6a241393e74ad44e",
+        "name": "Flight radar example",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff7f7f",
+            "label": true,
+            "label-position": "n",
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "13457ab7dac57013",
+            "f0930503930364d8",
+            "ca5a8a07ad63d629",
+            "9f6c99032e7ff582",
+            "3da129a59cc2af21",
+            "15a6d544be6bee76",
+            "6a9c67abe7ec17dd",
+            "e2a4bc505667c799"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 972,
+        "h": 222
+    },
+    {
+        "id": "13457ab7dac57013",
+        "type": "inject",
+        "z": "6a241393e74ad44e",
+        "g": "95312c4d5f221015",
+        "name": "ON",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "6a9c67abe7ec17dd"
+            ]
+        ]
+    },
+    {
+        "id": "f0930503930364d8",
+        "type": "inject",
+        "z": "6a241393e74ad44e",
+        "g": "95312c4d5f221015",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "6a9c67abe7ec17dd"
+            ]
+        ]
+    },
+    {
+        "id": "ca5a8a07ad63d629",
+        "type": "switch",
+        "z": "6a241393e74ad44e",
+        "g": "95312c4d5f221015",
+        "name": "Is this flow enabled?",
+        "property": "start-stop",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "e2a4bc505667c799"
+            ]
+        ]
+    },
+    {
+        "id": "9f6c99032e7ff582",
+        "type": "inject",
+        "z": "6a241393e74ad44e",
+        "g": "95312c4d5f221015",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "ca5a8a07ad63d629"
+            ]
+        ]
+    },
+    {
+        "id": "3da129a59cc2af21",
+        "type": "debug",
+        "z": "6a241393e74ad44e",
+        "g": "95312c4d5f221015",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 890,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "15a6d544be6bee76",
+        "type": "debug",
+        "z": "6a241393e74ad44e",
+        "g": "95312c4d5f221015",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 550,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "6a9c67abe7ec17dd",
+        "type": "change",
+        "z": "6a241393e74ad44e",
+        "g": "95312c4d5f221015",
+        "name": "Enable / Disable this flow",
+        "rules": [
+            {
+                "t": "set",
+                "p": "start-stop",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "15a6d544be6bee76"
+            ]
+        ]
+    },
+    {
+        "id": "e2a4bc505667c799",
+        "type": "flightradar24",
+        "z": "6a241393e74ad44e",
+        "g": "95312c4d5f221015",
+        "lat": "39.4893100",
+        "latType": "num",
+        "lon": "-0.4816300",
+        "lonType": "num",
+        "name": "",
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "3da129a59cc2af21",
+                "7458e6fe133fb70d"
+            ]
+        ]
+    },
+    {
+        "id": "7458e6fe133fb70d",
+        "type": "function",
+        "z": "6a241393e74ad44e",
+        "g": "7781bbb181c78d84",
+        "name": "",
+        "func": "\nif ((msg.payload.origin == \"BCN\" && msg.payload.destination == \"VLC\") || (msg.payload.destination == \"MAD\")) {\n    msg.payload.accept = true\n} else {\n    msg.payload.accept = false\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 360,
+        "wires": [
+            [
+                "2be86562804c7eff",
+                "458e230441294aa9"
+            ]
+        ]
+    },
+    {
+        "id": "458e230441294aa9",
+        "type": "change",
+        "z": "6a241393e74ad44e",
+        "g": "7781bbb181c78d84",
+        "name": "Enable / Disable writing to the file",
+        "rules": [
+            {
+                "t": "set",
+                "p": "accept",
+                "pt": "flow",
+                "to": "payload.accept",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 460,
+        "wires": [
+            [
+                "23c14b3dbdb3c657",
+                "cc8bf578f34a90fc"
+            ]
+        ]
+    },
+    {
+        "id": "2be86562804c7eff",
+        "type": "debug",
+        "z": "6a241393e74ad44e",
+        "g": "7781bbb181c78d84",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "23c14b3dbdb3c657",
+        "type": "switch",
+        "z": "6a241393e74ad44e",
+        "g": "7781bbb181c78d84",
+        "name": "Is the flow enabled?",
+        "property": "payload.accept",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 560,
+        "y": 460,
+        "wires": [
+            [
+                "ebb79ea4125ef65c",
+                "7e00643e76d88a8c"
+            ]
+        ]
+    },
+    {
+        "id": "7e00643e76d88a8c",
+        "type": "file",
+        "z": "6a241393e74ad44e",
+        "g": "7781bbb181c78d84",
+        "name": "",
+        "filename": "C:\\Users\\Thor\\Desktop\\node-RED\\sesiones\\2.- 26-10-2021\\FlightRadar_file\\flights.json",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 400,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ebb79ea4125ef65c",
+        "type": "debug",
+        "z": "6a241393e74ad44e",
+        "g": "7781bbb181c78d84",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "cc8bf578f34a90fc",
+        "type": "debug",
+        "z": "6a241393e74ad44e",
+        "g": "7781bbb181c78d84",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 400,
+        "wires": []
+    }
+]

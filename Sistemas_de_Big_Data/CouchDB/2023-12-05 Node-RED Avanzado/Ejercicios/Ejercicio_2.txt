@@ -1,0 +1,11 @@
+Enunciado de los ejercicios:
+
+------- LOCAL INSTANCE -------
+- Uso del nodo FlighRadar24 para empezar a recibir datos.
+Latitude: 39.4893100
+Longitude: -0.4816300
+
+Poder controlar su puesta en marcha / parado haciendo uso de variables de flujo.
+
+- Guardar en un fichero en disco los datos para las siguientes condiciones:
+ - (origin == "BCN" && destination == "VLC") || (destination == "MAD")

@@ -1,0 +1,294 @@
+[
+    {
+        "id": "b3b74ed5adcfc8ee",
+        "type": "tab",
+        "label": "FlightRadar WorldMap",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "0e9eaa6617df7cc8",
+        "type": "group",
+        "z": "b3b74ed5adcfc8ee",
+        "name": "Flight radar example",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff7f7f",
+            "label": true,
+            "label-position": "n",
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "0553c2f976964715",
+            "b4b49c11047dbcbd",
+            "124c51109b18bca6",
+            "ceda6d6ce42d0add",
+            "e85bc0c4d3b10e8d",
+            "55508a8691b6aca9",
+            "60c28372c21d9281",
+            "3fc5ef6022be0fbc",
+            "5a1bcaca9c529dbd",
+            "6fae2be4991941a8"
+        ],
+        "x": 74,
+        "y": 179,
+        "w": 912,
+        "h": 282
+    },
+    {
+        "id": "0553c2f976964715",
+        "type": "inject",
+        "z": "b3b74ed5adcfc8ee",
+        "g": "0e9eaa6617df7cc8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "3fc5ef6022be0fbc"
+            ]
+        ]
+    },
+    {
+        "id": "b4b49c11047dbcbd",
+        "type": "debug",
+        "z": "b3b74ed5adcfc8ee",
+        "g": "0e9eaa6617df7cc8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 870,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "124c51109b18bca6",
+        "type": "ui_button",
+        "z": "b3b74ed5adcfc8ee",
+        "g": "0e9eaa6617df7cc8",
+        "name": "Free Run",
+        "group": "5a647fd07ff27317",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Free Run",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "55508a8691b6aca9"
+            ]
+        ]
+    },
+    {
+        "id": "ceda6d6ce42d0add",
+        "type": "ui_button",
+        "z": "b3b74ed5adcfc8ee",
+        "g": "0e9eaa6617df7cc8",
+        "name": "STOP",
+        "group": "5a647fd07ff27317",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "STOP",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "60c28372c21d9281"
+            ]
+        ]
+    },
+    {
+        "id": "e85bc0c4d3b10e8d",
+        "type": "ui_button",
+        "z": "b3b74ed5adcfc8ee",
+        "g": "0e9eaa6617df7cc8",
+        "name": "Manual Update",
+        "group": "5a647fd07ff27317",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Manual Update",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 180,
+        "y": 420,
+        "wires": [
+            [
+                "5a1bcaca9c529dbd"
+            ]
+        ]
+    },
+    {
+        "id": "55508a8691b6aca9",
+        "type": "function",
+        "z": "b3b74ed5adcfc8ee",
+        "g": "0e9eaa6617df7cc8",
+        "name": "B",
+        "func": "flow.set(\"status\",\"run\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60c28372c21d9281",
+        "type": "function",
+        "z": "b3b74ed5adcfc8ee",
+        "g": "0e9eaa6617df7cc8",
+        "name": "C",
+        "func": "flow.set(\"status\",\"stopped\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3fc5ef6022be0fbc",
+        "type": "function",
+        "z": "b3b74ed5adcfc8ee",
+        "g": "0e9eaa6617df7cc8",
+        "name": "A",
+        "func": "var status = flow.get(\"status\")||\"stopped\";\n\nif (status==\"run\") {\n   msg.payload = 1;\n   return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "5a1bcaca9c529dbd"
+            ]
+        ]
+    },
+    {
+        "id": "5a1bcaca9c529dbd",
+        "type": "flightradar24",
+        "z": "b3b74ed5adcfc8ee",
+        "g": "0e9eaa6617df7cc8",
+        "lat": "39.4893100",
+        "latType": "num",
+        "lon": "-0.4816300",
+        "lonType": "num",
+        "name": "",
+        "x": 550,
+        "y": 320,
+        "wires": [
+            [
+                "b4b49c11047dbcbd",
+                "6fae2be4991941a8"
+            ]
+        ]
+    },
+    {
+        "id": "6fae2be4991941a8",
+        "type": "ui_worldmap",
+        "z": "b3b74ed5adcfc8ee",
+        "g": "0e9eaa6617df7cc8",
+        "group": "5a647fd07ff27317",
+        "order": 1,
+        "width": 21,
+        "height": 12,
+        "name": "",
+        "lat": "39.4893100",
+        "lon": "-0.4816300",
+        "zoom": "10",
+        "layer": "",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "path": "/worldmap",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 900,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5a647fd07ff27317",
+        "type": "ui_group",
+        "name": "worldmap",
+        "tab": "6b2e97471b51009e",
+        "order": 1,
+        "disp": true,
+        "width": "21",
+        "collapse": false
+    },
+    {
+        "id": "6b2e97471b51009e",
+        "type": "ui_tab",
+        "name": "FlightRadar",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    }
+]

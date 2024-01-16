@@ -1,0 +1,154 @@
+[
+    {
+        "id": "98c786aed1e58012",
+        "type": "tab",
+        "label": "Hola Mundo",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6d6f2bd80a23de97",
+        "type": "inject",
+        "z": "98c786aed1e58012",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hola Mundo!",
+        "payloadType": "str",
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "20de58801fe25752",
+                "a7999a1a732446cd",
+                "f337f59d14bf77cc"
+            ]
+        ]
+    },
+    {
+        "id": "20de58801fe25752",
+        "type": "debug",
+        "z": "98c786aed1e58012",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3f741f65af4ecfd0",
+        "type": "inject",
+        "z": "98c786aed1e58012",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 80,
+        "wires": [
+            [
+                "26a019af4fc3c43e"
+            ]
+        ]
+    },
+    {
+        "id": "26a019af4fc3c43e",
+        "type": "debug",
+        "z": "98c786aed1e58012",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f337f59d14bf77cc",
+        "type": "function",
+        "z": "98c786aed1e58012",
+        "name": "timeConvert",
+        "func": "if ( !msg.timestamp ) msg.timestamp = Math.round(+new Date());\n\nvar dt = new Date(msg.timestamp);\nmsg = {\n\t'month':\tdt.getMonth() + 1,\n\t'day':\t\tdt.getDate(),\n\t'year':\t\tdt.getFullYear(),\n\t'hours':\tdt.getHours(),\n\t'mins':\t\tdt.getMinutes(),\n\t'secs':     dt.getSeconds(),\n\t'msecs':\tdt.getMilliseconds()\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "e450f586ad082ef0"
+            ]
+        ]
+    },
+    {
+        "id": "e450f586ad082ef0",
+        "type": "debug",
+        "z": "98c786aed1e58012",
+        "name": "output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a7999a1a732446cd",
+        "type": "debug",
+        "z": "98c786aed1e58012",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 200,
+        "wires": []
+    }
+]
