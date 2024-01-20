@@ -62,6 +62,12 @@ WebDataNotify Pipeline está diseñado para automatizar la monitorización de in
    ```
 
 3. Supervisa la consola para obtener actualizaciones de progreso y verifica tu correo electrónico para el archivo CSV generado.
+   
+4. Ejecuta el archivo createReport.py para crear un reporte con los resultados
+   
+   ```bash
+   python createReport.py
+   ```
 
 ## Configuración
 

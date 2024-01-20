@@ -11,7 +11,6 @@ WebDataNotify Pipeline is a comprehensive solution for real-time data collection
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Configuration](#configuration)
   - [License](#license)
 
 ## Overview
@@ -62,6 +61,12 @@ WebDataNotify Pipeline is designed to automate the monitoring of product informa
    ```
 
 3. Monitor the console for progress updates and check your email for the generated CSV file.
+
+4. Run the createReport.py file to create a report with the results.
+   
+   ````bash
+   python createReport.py
+   ```
 
 ## Configuration
 
