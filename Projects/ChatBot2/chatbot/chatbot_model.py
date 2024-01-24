@@ -1,7 +1,6 @@
 import random
 import nltk
 from nltk.chat.util import Chat, reflections
-
 class SimpleChatbot:
     def __init__(self):
         self.set_pairs()

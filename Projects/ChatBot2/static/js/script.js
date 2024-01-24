@@ -185,6 +185,21 @@ function changeLanguage() {
 
 }
 
+function changeModel() {
+    var selectedModel = document.getElementById('model-select').value;
+    // localStorage.setItem('model', selectedModel)
+    // console.log('Cambiado a modelo: ' + selectedModel);
+
+    fetch('/changeModel', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ model: selectedModel })
+
+      });
+}
 
 // Load chat history when the page loads
 window.onload = loadChatHistory;
+// window.onload = changeModel;
