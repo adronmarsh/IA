@@ -6,10 +6,15 @@ from flask import make_response
 from datetime import datetime
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash
 
 import ollama
+import re
 
 app = Flask(__name__)
+
+client = MongoClient("mongodb://localhost:27017")
+db = client.chatbot
 
 
 @app.route('/')
@@ -20,8 +25,39 @@ def index():
     current_model = request.cookies.get('model', 'mario')
     return render_template('index.html')
 
-client = MongoClient("mongodb://localhost:27017")
-db = client.chatbot
+def is_email_valid(email):
+    """Comprueba si el correo electrónico tiene un formato válido."""
+    pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+    return re.match(pattern, email)
+    
+@app.route('/register', methods=['POST'])
+def register():
+    username = request.json.get('username')
+    password = request.json.get('password')
+    email = request.json.get('email')
+
+    # Validar que los campos no estén vacíos
+    if not username or not password or not email:
+        return jsonify({"error": "Todos los campos son obligatorios"}), 400
+
+    # Validar el formato del correo electrónico
+    if not is_email_valid(email):
+        return jsonify({"error": "Formato de correo electrónico inválido"}), 400
+
+    # Comprobar si el usuario o el correo electrónico ya existen
+    if db.users.find_one({"$or": [{"username": username}, {"email": email}]}):
+        return jsonify({"error": "El nombre de usuario o correo electrónico ya está registrado"}), 409
+
+    hashed_password = generate_password_hash(password)
+
+    # Insertar el nuevo usuario en la base de datos
+    db.users.insert_one({
+        "username": username,
+        "email": email,
+        "password": hashed_password
+    })
+
+    return jsonify({"message": "Usuario registrado con éxito"})
 
 @app.route('/sendMessage', methods=['POST'])
 def send_message():

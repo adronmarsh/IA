@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
     <div class="side-menu">
@@ -23,6 +23,15 @@
         </select>
         <button id="clear-chat" class="side-button">Clear Chat</button>
         <div class="drag-handle"></div>
+        <!-- <div class="container">
+            <h2>Registro de Usuario</h2>
+            <form id="registration-form">
+                <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <button type="submit">Registrar</button>
+            </form>
+        </div> -->
     </div>
     <div class="chat-container">
         <div id="chatbox">

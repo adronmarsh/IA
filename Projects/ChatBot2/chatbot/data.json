@@ -1,0 +1,45 @@
+{
+    "users": [
+        {
+            "user_id": 1,
+            "username": "user1",
+            "chats": [
+                {
+                    "chat_id": 101,
+                    "user_messages": [
+                        {"message_id": 1001, "text": "Hola, ¿cómo estás?"},
+                        {"message_id": 1002, "text": "¿Qué tiempo hace hoy?"}
+                    ],
+                    "bot_messages": [
+                        {"message_id": 5001, "text": "¡Hola! Estoy bien, gracias por preguntar."},
+                        {"message_id": 5002, "text": "Hoy el clima está soleado."}
+                    ]
+                },
+                {
+                    "chat_id": 102,
+                    "user_messages": [
+                        {"message_id": 1003, "text": "¿Puedes ayudarme con una pregunta?"}
+                    ],
+                    "bot_messages": [
+                        {"message_id": 5003, "text": "Claro, ¿en qué puedo ayudarte?"}
+                    ]
+                }
+            ]
+        },
+        {
+            "user_id": 2,
+            "username": "user2",
+            "chats": [
+                {
+                    "chat_id": 103,
+                    "user_messages": [
+                        {"message_id": 1004, "text": "Necesito información sobre mi pedido."}
+                    ],
+                    "bot_messages": [
+                        {"message_id": 5004, "text": "Puedo ayudarte con eso. ¿Cuál es tu número de pedido?"}
+                    ]
+                }
+            ]
+        }
+    ]
+}
