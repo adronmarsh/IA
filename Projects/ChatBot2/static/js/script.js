@@ -74,7 +74,7 @@ function handleKeyPress(event) {
 
 function setCurrentModelSelection() {
     var currentModel = getCookie('model');
-    if(currentModel) {
+    if (currentModel) {
         document.getElementById('model-select').value = currentModel;
     } else {
         // Si no hay una cookie, establece el valor por defecto
@@ -231,7 +231,7 @@ clearChatButton.addEventListener('click', function () {
     chatBox.innerHTML = "<p class='botText'><span>Hello! I'm your chatbot. How can I assist you?</span></p>"
 });
 
-window.onload = function() {
+window.onload = function () {
     loadChatHistory();
     setCurrentModelSelection();
 }
