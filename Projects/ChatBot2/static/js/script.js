@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var startWidth, startX, chatContainer;
 
     // Function to start dragging
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to stop dragging
     function stopDrag() {
-        document.documentElement.removeEventListener('mousemove', doDrag, false);    
+        document.documentElement.removeEventListener('mousemove', doDrag, false);
         document.documentElement.removeEventListener('mouseup', stopDrag, false);
     }
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         darkModeButton.textContent = document.body.getAttribute('data-theme') === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
     }
 
-    darkModeButton.addEventListener('click', function() {
+    darkModeButton.addEventListener('click', function () {
         var body = document.body;
         var newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         body.setAttribute('data-theme', newTheme);
@@ -70,6 +70,22 @@ function handleKeyPress(event) {
     if (event.key === 'Enter') {
         sendMessage();
     }
+}
+
+function setCurrentModelSelection() {
+    var currentModel = getCookie('model');
+    if(currentModel) {
+        document.getElementById('model-select').value = currentModel;
+    } else {
+        // Si no hay una cookie, establece el valor por defecto
+        document.getElementById('model-select').value = 'mistral';
+    }
+}
+
+function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
 }
 
 function messageClick(messageElement) {
@@ -187,19 +203,35 @@ function changeLanguage() {
 
 function changeModel() {
     var selectedModel = document.getElementById('model-select').value;
-    // localStorage.setItem('model', selectedModel)
-    // console.log('Cambiado a modelo: ' + selectedModel);
+
+    document.cookie = "model=" + selectedModel + ";path=/";
 
     fetch('/changeModel', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify({ model: selectedModel })
-
-      });
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Model changed to:', data.model);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
 }
 
-// Load chat history when the page loads
-window.onload = loadChatHistory;
-// window.onload = changeModel;
+var clearChatButton = document.getElementById('clear-chat');
+
+clearChatButton.addEventListener('click', function () {
+    localStorage.removeItem('chatHistory');
+
+    var chatBox = document.getElementById("chatbox");
+    chatBox.innerHTML = "<p class='botText'><span>Hello! I'm your chatbot. How can I assist you?</span></p>"
+});
+
+window.onload = function() {
+    loadChatHistory();
+    setCurrentModelSelection();
+}

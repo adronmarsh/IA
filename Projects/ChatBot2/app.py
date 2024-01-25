@@ -2,43 +2,45 @@ from flask import Flask, render_template, request, jsonify
 from chatbot.chatbot_model import chatbot_instance
 from markupsafe import escape
 from flask import Response
+from flask import make_response
 import ollama
 
 app = Flask(__name__)
-    
+
+
 @app.route('/')
 def index():
+    global current_model 
+    data = request.cookies
+    print("El contenido de cookies es:", data)
+    current_model = request.cookies.get('model', 'mario')
     return render_template('index.html')
 
 @app.route('/sendMessage', methods=['POST'])
-def sendMessage():
-    model = get_model()
-    print("Este es el modelo utilizado",model)
+def send_message():
+    global current_model
     user_input = escape(request.json['message'])
-    stream = ollama.chat(model=model, messages=[{'role': 'user', 'content': user_input}], stream=True)
-    response = ""
-    for chunk in stream:
-        response += chunk['message']['content']
+    
+    try:
+        stream = ollama.chat(model=current_model, messages=[{'role': 'user', 'content': user_input}], stream=True)
+        response = ""
+        for chunk in stream:
+            response += chunk['message']['content']
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({"response": "Lo sentimos, ha ocurrido un error. El modelo de chat seleccionado no está disponible en este momento. Por favor, intenta seleccionar otro modelo o contacta con el soporte si el problema continúa."})
+
     return jsonify({"response": response})
 
 @app.route('/changeModel', methods=['POST'])
-def get_model():
+def change_model():
+    global current_model
     data = request.json
-    print("Esto es el contenido de data:", data)
-    # model = data['model']
-    # model = request.json['model']
-    # model = 'llama-pro'
+    current_model = data.get('model')
 
-    try:
-        model = data['model'] if 'model' in data else 'mistral'  # Modelo por defecto
-    except KeyError:
-        model = 'mistral'  # Modelo por defecto en caso de que 'model' no exista en 'data'
-    except Exception as e:
-        model = 'mistral'  # Modelo por defecto para cualquier otra excepción
-        print(f"Error inesperado: {e}")  # O manejar la excepción de otra manera
-
-    return model
-
+    response = make_response(jsonify({"model": current_model}))
+    response.set_cookie('model', current_model, max_age=60*60*24*30)  # 30 días de validez
+    return jsonify({"model": current_model})
 
 if __name__ == '__main__':
     app.run(debug=True)
