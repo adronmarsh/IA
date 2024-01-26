@@ -6,6 +6,8 @@
     <title>Chatbot</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.1/marked.min.js"></script> -->
+
 </head>
 <body>
     <div class="side-menu">
@@ -37,12 +39,14 @@
         <div id="chatbox">
             <p class="botText"><span>Hello! I'm your chatbot. How can I assist you?</span></p>
         </div>
+        <button id="cancelButton" onclick="cancelBotResponse()" >
+            Cancelar
+        </button>
         <div class="input-container">
             <input id="textInput" type="text" name="userInput" aria-label="Type a message" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
             <button id="buttonInput" onclick="sendMessage()">
                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
             </button>
-
         </div>
 
     </div>

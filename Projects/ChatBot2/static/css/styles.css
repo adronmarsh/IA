@@ -279,3 +279,28 @@ body {
 .side-button:hover {
     background: #1e1e1e;
 }
+
+
+#cancelButton {
+    font-size: var(--font-size);
+    padding: 10px 15px;
+    background-color: #ff4d4d; /* Rojo para indicar una acción de cancelación */
+    color: white; /* Color del texto */
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: none; /* Inicialmente oculto */
+    margin: 10px; /* Margen para separarlo del chatbox */
+    width: calc(100% - 20px); /* Ajustar el ancho al contenedor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para darle un aspecto elevado */
+    align-self: center; /* Alineación vertical */
+}
+
+#cancelButton:hover {
+    background-color: #ff3333; /* Un rojo ligeramente más oscuro al pasar el ratón */
+}
+
+#cancelButton:active {
+    background-color: #e60000; /* Un rojo aún más oscuro al hacer clic */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Sombra más pequeña para efecto de presión */
+}
