@@ -126,13 +126,16 @@ function createMessageHtml(messageContent, time, isUser) {
 function sendMessage() {
     var userInput = document.getElementById("textInput").value;
     if (userInput.trim() === '') {
-        return; // Don't send empty messages
+        return;
     }
     document.getElementById("textInput").value = "";
     var time = getFormattedTime();
     var userHtml = createMessageHtml(userInput, time, true);
     document.getElementById("chatbox").innerHTML += userHtml;
-    saveChatHistory(document.getElementById("chatbox").innerHTML);
+
+    var botMessageElement = document.createElement("div");
+    botMessageElement.className = "botText";
+    document.getElementById("chatbox").appendChild(botMessageElement);
 
     fetch('/sendMessage', {
         method: 'POST',
@@ -141,13 +144,25 @@ function sendMessage() {
         },
         body: JSON.stringify({ message: userInput }),
     })
-        .then(response => response.json())
-        .then(data => {
-            var botHtml = createMessageHtml(data.response, time, false);
-            document.getElementById("chatbox").innerHTML += botHtml;
-            saveChatHistory(document.getElementById("chatbox").innerHTML);
-            var chatbox = document.getElementById("chatbox");
-            chatbox.scrollTop = chatbox.scrollHeight;
+        .then(response => {
+            const reader = response.body.getReader();
+            let accumulatedResponse = "";
+
+            function read() {
+                reader.read().then(({ done, value }) => {
+                    if (done) {
+                        saveChatHistory();
+                        document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+                        return;
+                    }
+                    accumulatedResponse += new TextDecoder("utf-8").decode(value);
+                    botMessageElement.innerHTML = `<span>${accumulatedResponse}</span><div class="timestamp">${time}</div>`;
+                    saveChatHistory();
+                    read();
+                });
+            }
+
+            read();
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -162,7 +177,7 @@ function deleteMessage(event, editButtonElement) {
     chatbox.removeChild(messageElement);
 
     // Update local storage
-    saveChatHistory(chatbox.innerHTML);
+    saveChatHistory();
 }
 
 function editMessage(event, editButtonElement) {
@@ -176,17 +191,15 @@ function editMessage(event, editButtonElement) {
     if (newText !== null) {
         messageSpan.textContent = newText;
         // Update local storage
-        saveChatHistory(chatbox.innerHTML);
+        saveChatHistory();
     }
 }
 
-function saveChatHistory(html) {
-    // Save the chat history to local storage
-    localStorage.setItem('chatHistory', html);
+function saveChatHistory() {
+    localStorage.setItem('chatHistory', document.getElementById("chatbox").innerHTML);
 }
 
 function loadChatHistory() {
-    // Load the chat history from local storage
     let chatHistory = localStorage.getItem('chatHistory');
     if (chatHistory) {
         document.getElementById("chatbox").innerHTML = chatHistory;

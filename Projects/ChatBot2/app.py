@@ -64,15 +64,17 @@ def send_message():
     global current_model
     user_input = escape(request.json['message'])
     
-    try:
-        stream = ollama.chat(model=current_model, messages=[{'role': 'user', 'content': user_input}], stream=True)
-        response = ""
-        for chunk in stream:
-            response += chunk['message']['content']
-            return jsonify({"response": response})
-    except Exception as e:
-        print(f"Error: {e}")
-        return jsonify({"response": "Lo sentimos, ha ocurrido un error. El modelo de chat seleccionado no está disponible en este momento. Por favor, intenta seleccionar otro modelo o contacta con el soporte si el problema continúa."})
+    def generate():
+        try:
+            stream = ollama.chat(model=current_model, messages=[{'role': 'user', 'content': user_input}], stream=True)
+            # response = ""
+            for chunk in stream:
+                # response += chunk['message']['content']
+                yield chunk['message']['content']
+
+        except Exception as e:
+            print(f"Error: {e}")
+            return jsonify({"response": "Lo sentimos, ha ocurrido un error. El modelo de chat seleccionado no está disponible en este momento. Por favor, intenta seleccionar otro modelo o contacta con el soporte si el problema continúa."})
 
     # db.chats.insert_one({
     #     "id": chat_id,
@@ -88,7 +90,8 @@ def send_message():
     #     "chat_id": chat_id,
     #     "timestamp": datetime.now()
     # })
-    return jsonify({"response": response})
+    return Response(generate(), content_type='text/plain')
+    # return jsonify({"response": response})
 
 @app.route('/changeModel', methods=['POST'])
 def change_model():
