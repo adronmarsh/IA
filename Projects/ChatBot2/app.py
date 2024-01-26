@@ -22,42 +22,42 @@ def index():
     global current_model 
     data = request.cookies
     print("El contenido de cookies es:", data)
-    current_model = request.cookies.get('model', 'mario')
+    current_model = request.cookies.get('model', 'mistral')
     return render_template('index.html')
 
-def is_email_valid(email):
-    """Comprueba si el correo electrónico tiene un formato válido."""
-    pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-    return re.match(pattern, email)
+# def is_email_valid(email):
+#     """Comprueba si el correo electrónico tiene un formato válido."""
+#     pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+#     return re.match(pattern, email)
     
-@app.route('/register', methods=['POST'])
-def register():
-    username = request.json.get('username')
-    password = request.json.get('password')
-    email = request.json.get('email')
+# @app.route('/register', methods=['POST'])
+# def register():
+#     username = request.json.get('username')
+#     password = request.json.get('password')
+#     email = request.json.get('email')
 
-    # Validar que los campos no estén vacíos
-    if not username or not password or not email:
-        return jsonify({"error": "Todos los campos son obligatorios"}), 400
+#     # Validar que los campos no estén vacíos
+#     if not username or not password or not email:
+#         return jsonify({"error": "Todos los campos son obligatorios"}), 400
 
-    # Validar el formato del correo electrónico
-    if not is_email_valid(email):
-        return jsonify({"error": "Formato de correo electrónico inválido"}), 400
+#     # Validar el formato del correo electrónico
+#     if not is_email_valid(email):
+#         return jsonify({"error": "Formato de correo electrónico inválido"}), 400
 
-    # Comprobar si el usuario o el correo electrónico ya existen
-    if db.users.find_one({"$or": [{"username": username}, {"email": email}]}):
-        return jsonify({"error": "El nombre de usuario o correo electrónico ya está registrado"}), 409
+#     # Comprobar si el usuario o el correo electrónico ya existen
+#     if db.users.find_one({"$or": [{"username": username}, {"email": email}]}):
+#         return jsonify({"error": "El nombre de usuario o correo electrónico ya está registrado"}), 409
 
-    hashed_password = generate_password_hash(password)
+#     hashed_password = generate_password_hash(password)
 
-    # Insertar el nuevo usuario en la base de datos
-    db.users.insert_one({
-        "username": username,
-        "email": email,
-        "password": hashed_password
-    })
+#     # Insertar el nuevo usuario en la base de datos
+#     db.users.insert_one({
+#         "username": username,
+#         "email": email,
+#         "password": hashed_password
+#     })
 
-    return jsonify({"message": "Usuario registrado con éxito"})
+#     return jsonify({"message": "Usuario registrado con éxito"})
 
 @app.route('/sendMessage', methods=['POST'])
 def send_message():
@@ -69,6 +69,7 @@ def send_message():
         response = ""
         for chunk in stream:
             response += chunk['message']['content']
+            return jsonify({"response": response})
     except Exception as e:
         print(f"Error: {e}")
         return jsonify({"response": "Lo sentimos, ha ocurrido un error. El modelo de chat seleccionado no está disponible en este momento. Por favor, intenta seleccionar otro modelo o contacta con el soporte si el problema continúa."})
