@@ -157,7 +157,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     cursor: text;
-    overflow-y: hidden;
+    overflow-y: auto;
     resize: none;
 }
 
@@ -216,34 +216,34 @@ textarea {
 }
 
 /* Scrollbar styling */
-#chatbox::-webkit-scrollbar {
+#chatbox::-webkit-scrollbar, #textInput::-webkit-scrollbar {
     width: 12px;
 }
 
-#chatbox::-webkit-scrollbar-track {
+#chatbox::-webkit-scrollbar-track, #textInput::-webkit-scrollbar-track {
     background: #2a2a2a;
     background: var(--menu-bg-color);
     border-radius: 10px;
 }
 
-#chatbox::-webkit-scrollbar-thumb {
+#chatbox::-webkit-scrollbar-thumb, #textInput::-webkit-scrollbar-thumb {
     background-color: #555;
     border-radius: 10px;
     border: 3px solid #2a2a2a;
 }
 
-#chatbox::-webkit-scrollbar-thumb:hover {
+#chatbox::-webkit-scrollbar-thumb:hover, #textInput::-webkit-scrollbar-thumb:hover {
     background: #666;
 }
 
 /* For Firefox */
-#chatbox {
+#chatbox, #textInput {
     scrollbar-width: thin;
     scrollbar-color: #555 #2a2a2a;
 }
 
 /* For other browsers */
-#chatbox {
+#chatbox, #textInput {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
