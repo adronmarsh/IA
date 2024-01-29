@@ -74,9 +74,7 @@ def send_message():
         try:
             stream = ollama.chat(model=current_model, messages=[
                                  {'role': 'user', 'content': user_input}], stream=True)
-            # response = ""
             for chunk in stream:
-                # response += chunk['message']['content']
                 yield chunk['message']['content']
 
         except Exception as e:
@@ -98,7 +96,6 @@ def send_message():
     #     "timestamp": datetime.now()
     # })
     return Response(generate(), content_type='text/plain')
-    # return jsonify({"response": response})
 
 
 @app.route('/changeModel', methods=['POST'])

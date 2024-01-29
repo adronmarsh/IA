@@ -62,10 +62,14 @@ function getFormattedTime() {
 }
 
 function handleKeyPress(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
         sendMessage();
+    } else if (event.key === 'Enter' && event.shiftKey) {
+
     }
 }
+
 
 function setCurrentModelSelection() {
     var currentModel = getCookie('model');
@@ -103,7 +107,11 @@ function toggleMessageMenu(messageDiv) {
 
 function createMessageHtml(messageContent, time, isUser) {
     var messageClass = isUser ? 'userText' : 'botText';
-    // messageContent = marked(messageContent); # Permite el uso de Markdown
+
+    // messageContent = messageContent.replace(/\n/g, '<br>');
+    // messageContent = DOMPurify.sanitize(marked(messageContent));
+
+    messageContent = messageContent.replace(/\n/g, '<br>');
 
     return `
         <div class="${messageClass}" onclick="toggleMessageMenu(this)">
@@ -159,6 +167,8 @@ function sendMessage() {
                     }
                     
                     accumulatedResponse += new TextDecoder("utf-8").decode(value);
+                    // accumulatedResponse = DOMPurify.sanitize(marked(accumulatedResponse));
+                    accumulatedResponse = accumulatedResponse.replace(/\n/g, '<br>');
                     botMessageElement.innerHTML = `<span>${accumulatedResponse}</span><div class="timestamp">${getFormattedTime()}</div>`;
 
                     read();

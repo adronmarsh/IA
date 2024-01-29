@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.1/marked.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script> -->
 
 </head>
 <body>
@@ -43,12 +44,11 @@
             Cancelar
         </button>
         <div class="input-container">
-            <input id="textInput" type="text" name="userInput" aria-label="Type a message" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <textarea id="textInput" name="userInput" aria-label="Type a message" placeholder="Type a message..." onkeypress="handleKeyPress(event)"></textarea>
             <button id="buttonInput" onclick="sendMessage()">
                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
             </button>
         </div>
-
     </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

@@ -157,8 +157,16 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     cursor: text;
+    overflow-y: hidden;
+    resize: none;
 }
 
+textarea {
+    overflow-y: auto;
+    height: auto;
+    min-height: 50px;
+    max-height: 100px;
+}
 .delete-btn {
     background: none;
     border: none;
