@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, make_response
 from chatbot.chatbot_model import chatbot_instance
 from markupsafe import escape
 from flask import Response
@@ -19,17 +19,22 @@ db = client.chatbot
 
 @app.route('/')
 def index():
-    global current_model 
-    data = request.cookies
-    print("El contenido de cookies es:", data)
-    current_model = request.cookies.get('model', 'mistral')
+    global current_model
+    current_model = request.cookies.get('model')
+
+    if not current_model:
+        current_model = 'mistral'
+        response = make_response(render_template('index.html'))
+        response.set_cookie('model', current_model, max_age=60*60*24*30)
+        return response
+
     return render_template('index.html')
 
 # def is_email_valid(email):
 #     """Comprueba si el correo electrónico tiene un formato válido."""
 #     pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
 #     return re.match(pattern, email)
-    
+
 # @app.route('/register', methods=['POST'])
 # def register():
 #     username = request.json.get('username')
@@ -59,14 +64,16 @@ def index():
 
 #     return jsonify({"message": "Usuario registrado con éxito"})
 
+
 @app.route('/sendMessage', methods=['POST'])
 def send_message():
     global current_model
     user_input = escape(request.json['message'])
-    
+
     def generate():
         try:
-            stream = ollama.chat(model=current_model, messages=[{'role': 'user', 'content': user_input}], stream=True)
+            stream = ollama.chat(model=current_model, messages=[
+                                 {'role': 'user', 'content': user_input}], stream=True)
             # response = ""
             for chunk in stream:
                 # response += chunk['message']['content']
@@ -93,6 +100,7 @@ def send_message():
     return Response(generate(), content_type='text/plain')
     # return jsonify({"response": response})
 
+
 @app.route('/changeModel', methods=['POST'])
 def change_model():
     global current_model
@@ -102,6 +110,7 @@ def change_model():
     response = make_response(jsonify({"model": current_model}))
     response.set_cookie('model', current_model, max_age=60*60*24*30)
     return jsonify({"model": current_model})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
