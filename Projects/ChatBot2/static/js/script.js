@@ -142,6 +142,7 @@ function sendMessage() {
     var botMessageElement = document.createElement("div");
     botMessageElement.className = "botText";
     document.getElementById("chatbox").appendChild(botMessageElement);
+    // hljs.highlightAll();
 
     fetch('/sendMessage', {
         method: 'POST',
@@ -162,12 +163,16 @@ function sendMessage() {
                         document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
                         return;
                     }
-                    
-                    accumulatedResponse += new TextDecoder("utf-8").decode(value);
 
-                    let htmlContent = DOMPurify.sanitize(marked(accumulatedResponse));
-                    htmlContent = htmlContent.replace(/\n/g, '<br>');
+                    accumulatedResponse += new TextDecoder("utf-8").decode(value);
+                    let htmlContent;
+                    if (accumulatedResponse.startsWith('```')) {
+                        htmlContent = DOMPurify.sanitize(accumulatedResponse);
+                    } else {
+                        htmlContent = DOMPurify.sanitize(marked(accumulatedResponse)).replace(/\n/g, '<br>');
+                    }
                     botMessageElement.innerHTML = `<span>${htmlContent}</span><div class="timestamp">${getFormattedTime()}</div>`;
+                    // hljs.highlightAll();
 
                     read();
                 });
