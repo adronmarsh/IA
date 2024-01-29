@@ -108,9 +108,6 @@ function toggleMessageMenu(messageDiv) {
 function createMessageHtml(messageContent, time, isUser) {
     var messageClass = isUser ? 'userText' : 'botText';
 
-    // messageContent = messageContent.replace(/\n/g, '<br>');
-    // messageContent = DOMPurify.sanitize(marked(messageContent));
-
     messageContent = messageContent.replace(/\n/g, '<br>');
 
     return `
@@ -167,9 +164,10 @@ function sendMessage() {
                     }
                     
                     accumulatedResponse += new TextDecoder("utf-8").decode(value);
-                    // accumulatedResponse = DOMPurify.sanitize(marked(accumulatedResponse));
-                    accumulatedResponse = accumulatedResponse.replace(/\n/g, '<br>');
-                    botMessageElement.innerHTML = `<span>${accumulatedResponse}</span><div class="timestamp">${getFormattedTime()}</div>`;
+
+                    let htmlContent = DOMPurify.sanitize(marked(accumulatedResponse));
+                    htmlContent = htmlContent.replace(/\n/g, '<br>');
+                    botMessageElement.innerHTML = `<span>${htmlContent}</span><div class="timestamp">${getFormattedTime()}</div>`;
 
                     read();
                 });
