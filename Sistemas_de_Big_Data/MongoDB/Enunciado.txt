@@ -1,0 +1,27 @@
+Ejercicios MongoDB:
+a) Crea una colección llamada movies.
+b) Inserta los documentos de films.txt en la colección movies.
+c) Sobre la colección movies, ejecutar las siguientes consultas:
+	1.- Obtener todos los documentos
+	2.- Obtener documentos con writer igual a "Quentin Tarantino"
+	3.- Obtener documentos que incluyan a "Brad Pitt" dentro de la colección actors
+	4.- Obtener documentos de la franquicia "The Hobbit"
+	5.- Obtener las dos primeras peliculas de la franquicia "The Hobbit"
+	6.- Obtener todas las peliculas de los 90
+	7.- Obtener las peliculas estrenadas entre el año 2000 y 2010
+	8.- Obtener las peliculas estrenadas entre el año 2000 y 2010. Solo ver la propiedad title
+	9.- Ordena las peliculas de la franquicia "The Hobbit" en sentido ascendente
+	10.- Obtener la primera pelicula de la franquicia "The Hobbit"
+	11.- Obtener nº de peliculas donde el writer es "J.R.R. Tolkien"
+	12.- Hay un error en la pelicula "The Hobbit: The Battle of the Five Armies" es del año 2014. Incrementar en una unidad el año.
+	13.- Renombrar la propiedad titulo por title en "Avatar"
+d) Agrega una sinopsis a : "The Hobbit: An Unexpected Journey" --> "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim
+ their mountain home - and the gold within it - from the dragon Smaug."
+e) Agrega "Samuel L. Jackson" como actor a la pelicula "Pulp Fiction"
+f) Eliminar John Travolta como actor de "Pulp Fiction"
+g) Encontrar las peliculas que contenga en la sinopsis la palabra "Bilbo"
+h) Encontrar las peliculas que contengan en la sinopsis la palabra "Gandalf"
+i) Encontrar las peliculas que contengan la palabra "Bilbo" pero no contengan "Gandalf"
+j) Encontrar las peliculas que contengan la palabra "dwarves" o "hobbit"
+k) Encontrar las peliculas que contengan la palabra "gold" y "dragon"
+l) Eliminar la pelicula Avatar
