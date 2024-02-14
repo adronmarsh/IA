@@ -1,0 +1,56 @@
+DNI,Nombre,NSS,Direccion,CP,Edad,Profesion,Positivo
+12348791,Andres Calamar,73648791,C. de Vicent Serra i Orvay 43,7800,22,Cientifico_de_datos,SI
+45793584,Antonia Molina,45793224,Av.  de les Corts Catalanes 184,8038,55,Programador_Multi,NO
+15935748,Rebeca Ridruejo,14444448,C. Riu Segre 19 ,43006,60,Ingeniero_de_datos,SI
+36987412,Felipe Romero,36985858,C. Catedratico Ferre Vidiella 4 ,3005,31,Ingeniero_de_datos,SI
+32147985,Ramon Garcia,12127985,Av. Navarro Reverter 15 ,12400,40,Analista_de_datos,SI
+25897461,Susana Gonzalez,99977461,C. de Josefa Valcarcel 44 ,28027,38,Administrador_Sist,NO
+85974613,Rosario Martinez,97978441,Pl. Cervantes 1 ,7825,59,Cientifico_de_datos,SI
+55669988,Ana Pacheco,99885566,C. Cordoba 6 ,8039,29,Analista_de_datos,NO
+14747814,Luis Argentina,33474494,Pl. Rosalia 1 ,43011,35,Ingeniero_de_datos,NO
+90348791,Noelia Sanchis,87917364,Av. Corts Valencianes 15,3000,42,Programador_Web,SI
+30793584,Pere Pons,79345224,Pl. Paz 22,12436,26,Programador_Web,SI
+50935748,Isidro Flores,44414448,C. Ayuntamiento 1,28042,38,Programador_Multi,NO
+60987412,Andrea Piles,85836985,Av. Botanico Cavanilles 33,7801,44,Cientifico_de_datos,NO
+20147985,Natalia Abad,27912185,C. Pintor Sorolla 20,8015,55,Programador_Multi,SI
+50897461,Ruben Machancoses,99469771,Pl. Praga 10,43046,33,Programador_Web,NO
+50974613,Francisco Rioja,99784741,C. Rosales 125,3004,27,Programador_Web,SI
+70669988,Enrique Tormo,85569986,Av. Francia 198,12463,42,Programador_Multi,NO
+40747814,Amelia Benavent,29433474,C. Alta 19,28097,20,Cientifico_de_datos,SI
+12348790,Andrea Calamar,23648791,C. de Vicent Serra i Orvay 143,7810,25,Programador_Multi,SI
+45793580,Antonio Molina,25793224,Av.  de les Corts Catalanes  4,8010,50,Programador_Web,NO
+15935740,Rodolfo Ridruejo,24444448,C. Riu Segre 192,43010,40,Programador_Multi,SI
+36987410,Felicidad Romero,26985858,C. Catedratico Ferre Vidiella 42 ,3010,28,Programador_Web,SI
+32147980,Ramona Garcia,22127985,Av. Navarro Reverter 150,12410,42,Administrador_Sist,SI
+25897460,Jesus Gonzalez,29977461,C. de Josefa Valcarcel 244 ,28010,31,Administrador_Sist,NO
+85974610,Rosa  Martinez,27978441,Pl. Cervantes 134,7826,29,Cientifico_de_datos,SI
+55669980,AlfonsoPacheco,29885566,C. Cordoba 63 ,8026,39,Analista_de_datos,NO
+14747810,Luisa Argentina,23474494,Pl. Rosalia 13 ,43026,48,Ingeniero_de_datos,NO
+90348790,Nieves Sanchis,27917364,Av. Corts Valencianes 154,3026,22,Programador_Web,SI
+30793580,Aroa Pons,29345224,Pl. Paz 224,12426,36,Programador_Multi,SI
+50935740,Isidra Flores,24414448,C. Ayuntamiento 16,28026,47,Programador_Web,NO
+60987410,Andres Piles,25836985,Av. Botanico Cavanilles 3 ,7855,44,Administrador_Sist,NO
+20147980,Nicanor Abad,37912185,C. Pintor Sorolla 206,8055,42,Cientifico_de_datos,SI
+50897460,Raquel Machancoses,29469771,Pl. Praga 108,43055,33,Programador_Multi,NO
+50974610,Francisca Rioja,29784741,C. Rosales 12,3055,22,Ingeniero_de_datos,SI
+70669980,Enriqueta Tormo,25569986,Av. Francia 9 ,12455,20,Administrador_Sist,NO
+40747810,Amelio Benavent,29433474,C. Alta 90,28055,60,Cientifico_de_datos,SI
+40747814,Berta Benavent,29433474,C. Alta 19,28097,29,Cientifico_de_datos,SI
+12348797,Brenda Calamar,23648791,C. de Vicent Serra i Orvay 143,7815,21,Programador_Multi,SI
+45793587,Camilo Molina,25793224,Av.  de les Corts Catalanes  4,8015,58,Programador_Web,NO
+15935747, Raul Ridruejo,24444448,C. Riu Segre 192,43015,46,Programador_Multi,SI
+36987417,Flora Romero,26985858,C. Catedratico Ferre Vidiella 42 ,3015,22,Programador_Web,SI
+32147987,Emilia Garcia,22127985,Av. Navarro Reverter 150,12415,44,Administrador_Sist,NO
+25897467,Gonzalo Gonzalez,29977461,C. de Josefa Valcarcel 244 ,28015,38,Administrador_Sist,SI
+85974617,Margarita  Martinez,27978441,Pl. Cervantes 134,7825,20,Cientifico_de_datos,NO
+55669987,Pep Pacheco,29885566,C. Cordoba 63 ,8025,33,Analista_de_datos,SI
+14747817,Marisa Argentina,23474494,Pl. Rosalia 13 ,43025,43,Ingeniero_de_datos,SI
+90348797,Sol  Sanchis,27917364,Av. Corts Valencianes 154,3025,23,Programador_Web,NO
+30793587,Ines  Pons,29345224,Pl. Paz 224,12425,37,Programador_Web,SI
+50935747, Ana Flores,24414448,C. Ayuntamiento 16,28025,43,Programador_Multi,SI
+60987418,Ximo  Piles,25836985,Av. Botanico Cavanilles 3 ,7851,44,Administrador_Sist,SI
+20147988,Marc Abad,37912185,C. Pintor Sorolla 206,8051,41,Cientifico_de_datos,NO
+50897468,Lorena Machancoses,29469771,Pl. Praga 108,43051,33,Programador_Multi,SI
+50974618,Malena Rioja,29784741,C. Rosales 12,3051,29,Ingeniero_de_datos,NO
+70669988,Remedios Tormo,25569986,Av. Francia 9 ,12451,33,Ingeniero_de_datos,NO
+40747818,Esther Benavent,29433474,C. Alta 90,28051,56,Administrador_Sist,SI
