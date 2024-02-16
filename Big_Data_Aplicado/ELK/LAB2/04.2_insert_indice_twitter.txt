@@ -1,0 +1,43 @@
+curl -XPUT 'localhost:9200/twitter/tweet/1?pretty' -H 'Content-Type: application/json' -d'
+{														
+	"user": "JoanaFuset",										
+	"post_date": "2023-09-21T11:02:12",
+	"message": "My first Elasticsearch Tweet1",
+	"likes": 3								
+}														
+'														
+curl -XPUT 'localhost:9200/twitter/tweet/2?pretty' -H 'Content-Type: application/json' -d'
+{														
+	"user": "JoanaFuset",										
+	"post_date": "2023-09-21T11:04:16",
+	"message": "My second Elasticsearch Tweet2"							
+}														
+'														
+curl -XPUT 'localhost:9200/twitter/tweet/3?pretty' -H 'Content-Type: application/json' -d'
+{														
+	"user": "user2",											
+	"post_date": "2023-09-21T11:03:09",
+	"message": " Hello JoanaFuset Elasticsearch Tweet3"						
+}														
+'														
+curl -XPUT 'localhost:9200/twitter/tweet/4?pretty' -H 'Content-Type: application/json' -d'
+{														
+	"user": "user1",											
+	"post_date": "2023-09-21T11:05:47",
+	"message": "Hello JoanaFuset Elasticsearch Tweet4"						
+}														
+'														
+curl -XPUT 'localhost:9200/twitter/tweet/5?pretty' -H 'Content-Type: application/json' -d'
+{														
+	"user": "user1",											
+	"post_date": "2023-09-21T11:08:31",
+	"message": "Another Elasticsearch Tweet5"								
+}														
+'														
+curl -XPUT 'localhost:9200/twitter/tweet/6?pretty' -H 'Content-Type: application/json' -d'
+{														
+	"user": "user1",											
+	"post_date": "2023-09-21T11:12:12",
+	"message": "More Elasticsearch Tweet6"								
+}														
+'
