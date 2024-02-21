@@ -1,0 +1,13 @@
+distinct
+name jerar_profesion
+type string
+height 4
+
+Sistemas has Administrador_Sist Ingeniero_de_datos 
+Programadores_esp has Programador_Multi Programador_Web 
+Datos has Cientifico_de_datos Analista_de_datos 
+
+Otros has Sistemas Datos 
+Programadores has Programadores_esp 
+
+Todas_Profs has Otros Programadores 
