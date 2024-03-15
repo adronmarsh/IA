@@ -1,0 +1,28 @@
+{
+  "description": "Ingest pipeline created by text structure finder",
+  "processors": [
+    {
+      "grok": {
+        "field": "message",
+        "patterns": [
+          "\"%{NUMBER:ISBN}\\\";%{QUOTEDSTRING:title};%{QUOTEDSTRING:author};\"%{NUMBER:YOP}\\\";%{QUOTEDSTRING:publisher};\\\"%{URI:URL-S}\\\";\\\"%{URI:URL-M}\\\";\\\"%{URI:URL-L}\\\""
+        ]
+      }
+    },
+    {
+      "date": {
+        "field": "YOP",
+        "formats": [
+          "UNIX"
+        ]
+      }
+    },
+    {
+      "convert": {
+        "field": "ISBN",
+        "type": "long",
+        "ignore_missing": true
+      }
+    }
+  ]
+}
