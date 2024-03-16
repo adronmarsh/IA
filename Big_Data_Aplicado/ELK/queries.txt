@@ -1,0 +1,152 @@
+GET /libros/_search
+
+GET /libros/_search
+{
+  "query": {
+    "match": {
+      "publisher": "Oxford"
+    }
+  }
+}
+
+GET /libros/_search
+{
+  "query": {
+    "match_phrase": {
+      "publisher": "Oxford Press"
+    }
+  }
+}
+
+GET /libros/_search
+{
+  "query": {
+    "bool": {
+      "should": [
+        { "match": { "title": "The Amazing" } }
+      ],
+      "minimum_should_match": 1
+    }
+  }
+}
+
+GET /libros/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": { "author": "Jon Land" } }
+      ]
+    }
+  }
+}
+
+
+GET /libros/_search
+{
+  "query": {
+    "range": {
+      "YOP": {
+        "gte": "2010"
+      }
+    }
+  }
+}
+
+
+GET /ibros/_search
+{
+  "query": {
+    "multi_match": {
+      "query": "Joe",
+      "fields": ["title", "author", "publisher", "message"]
+    }
+  }
+}
+
+
+
+
+POST _scripts/libros_search_should_title
+{
+  "script": {
+    "lang": "mustache",
+    "source": {
+      "query": {
+        "bool": {
+          "should": [
+            { "match": { "query": "{{title}}" } }
+          ],
+          "minimum_should_match": 1
+        }
+      }
+    }
+  }
+}
+
+
+
+POST _scripts/libros_search_must_author
+{
+  "script": {
+    "lang": "mustache",
+    "source": {
+      "query": {
+        "bool": {
+          "must": [
+            { "match": { "query": "{{author}}" } }
+          ]
+        }
+      }
+    }
+  }
+}
+
+
+
+POST _scripts/libros_search_match_year
+{
+  "script": {
+    "lang": "mustache",
+    "source": {
+      "query": {
+        "match": {
+          "query": "{{year}}"
+        }
+      }
+    }
+  }
+}
+
+POST _scripts/libros_search_range_year
+{
+  "script": {
+    "lang": "mustache",
+    "source": {
+      "query": {
+        "range": {
+          "query": {
+            "gte": "{{start_year}}"
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+POST _scripts/libros_search_multi_match
+{
+  "script": {
+    "lang": "mustache",
+    "source": {
+      "query": {
+        "multi_match": {
+          "query": "{{query}}",
+          "fields": ["title", "author", "publisher", "message"]
+        }
+      }
+    }
+  }
+}
