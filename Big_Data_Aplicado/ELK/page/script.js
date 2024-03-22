@@ -49,7 +49,6 @@ function performSearch(searchType, query) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data.hits.hits);
         document.querySelector("#results").innerHTML = '';
         data.hits.hits.forEach(element => {
             showData(element);

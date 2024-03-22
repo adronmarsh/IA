@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador de Libros con Elasticsearch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="search-container">
+        <!-- Solo campo ISBN para la búsqueda -->
+        <input type="text" id="isbn-query" placeholder="ISBN...">
+        <button id="search-isbn-button">Buscar por ISBN</button>
+    </div>
+    <!-- Campos para la edición de detalles del libro -->
+    <div id="edit-container" style="display:none;">
+        <input type="text" id="edit-title" placeholder="Título del Libro">
+        <input type="text" id="edit-isbn" placeholder="Título del Libro">
+        <input type="text" id="edit-author" placeholder="Autor del Libro">
+        <input type="text" id="edit-year" placeholder="Año de Publicación">
+        <input type="text" id="edit-publisher" placeholder="Editorial">
+        <input type="text" id="edit-urlM" placeholder="URL de Imágenes">
+        <input type="text" id="edit-urlL" placeholder="URL de Imágenes">
+        <input type="text" id="edit-urlS" placeholder="URL de Imágenes">
+        <button id="update-button">Actualizar Datos</button>
+    </div>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
