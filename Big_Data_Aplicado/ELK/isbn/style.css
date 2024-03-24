@@ -1,24 +1,87 @@
-/* Estilos adicionales para el contenedor de edición */
-#edit-container {
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+
+#search-container {
     max-width: 600px;
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 20px;
     background-color: #1e1e1e;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
     justify-content: space-between;
 }
 
-#edit-container input {
+
+#isbn-query, #edit-title, #edit-isbn, #edit-author, #edit-year, #edit-publisher, #edit-urlM, #edit-urlL, #edit-urlS {
     flex-grow: 1;
-    margin: 5px;
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #333;
     background-color: #2a2a2a;
     color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+#search-isbn-button, #update-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e48933;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-isbn-button:hover, #update-button:hover {
+    background-color: #dd6b00;
+}
+
+
+#results, #edit-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.result-item, .book-details, #edit-container {
+    background-color: #242424;
+    border: 1px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.result-item h4, .book-details h2 {
+    color: #dd6b00;
+    margin-top: 0;
+}
+
+.result-item p, .book-details p, #edit-container input {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    #search-container, #edit-container {
+        flex-direction: column;
+    }
+
+    #isbn-query, #edit-title, #edit-isbn, #edit-author, #edit-year, #edit-publisher, #edit-urlM, #edit-urlL, #edit-urlS {
+        flex-basis: 100%;
+    }
 }

@@ -1,20 +1,20 @@
-/* Estilos Generales */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #121212;
+    color: #e0e0e0;
     margin: 0;
     padding: 20px;
     line-height: 1.6;
 }
 
-/* Contenedor de Búsqueda */
+
 #search-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #1e1e1e; /* Fondo ligeramente más claro que el body para contraste */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra más pronunciada */
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
@@ -23,17 +23,17 @@ body {
     justify-content: space-between;
 }
 
-/* Estilo del select */
+
 #search-type {
     flex-basis: 30%;
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid #333; /* Borde más oscuro */
-    background-color: #2a2a2a; /* Fondo de los campos más oscuro */
-    color: #e0e0e0; /* Texto claro */
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
 }
 
-/* Estilo del input */
+
 #search-query {
     flex-grow: 1;
     padding: 10px;
@@ -43,61 +43,61 @@ body {
     color: #e0e0e0;
 }
 
-/* Estilo del botón */
+
 #search-button {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background-color: #e48933; /* Azul más suave que el original */
+    background-color: #e48933;
     color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 #search-button:hover {
-    background-color: #dd6b00; /* Azul más oscuro al pasar el mouse */
+    background-color: #dd6b00;
 }
 
-/* Estilos para los resultados */
+
 #results {
     margin-top: 20px;
     padding: 20px;
-    background-color: #1e1e1e; /* Fondo oscuro para los resultados */
+    background-color: #1e1e1e;
 }
 
 .result-item, .book-details {
-    background-color: #242424; /* Fondo para cada resultado */
-    border: 1px solid #333; /* Borde más oscuro */
+    background-color: #242424;
+    border: 1px solid #333;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra más pronunciada */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .result-item h4, .book-details h2 {
-    color: #dd6b00; /* Color azul para títulos */
+    color: #dd6b00;
     margin-top: 0;
 }
 
 .result-item p, .book-details p {
     margin: 10px 0;
     line-height: 1.5;
-    color: #e0e0e0; /* Texto claro */
+    color: #e0e0e0;
 }
 
 .book-details p strong {
-    color: #e0e0e0; /* Texto claro para el texto en negrita */
+    color: #e0e0e0;
 }
 
-/* Mejorando la visualización de URLs */
+
 .book-details p a {
-    color: #dd6b00; /* Enlaces en azul */
+    color: #dd6b00;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .book-details p a:hover {
-    color: #dd6b00c9; /* Azul más oscuro al pasar el mouse */
+    color: #dd6b00c9;
 }
 
 @media (max-width: 768px) {
@@ -109,7 +109,7 @@ body {
     }
 }
 
-/* Estilos adicionales para el contenedor de edición */
+
 #edit-container {
     max-width: 600px;
     margin: 20px auto;
