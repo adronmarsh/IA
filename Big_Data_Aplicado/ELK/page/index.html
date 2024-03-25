@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador de Libros con Elasticsearch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="search-container">
+        <select id="search-type">
+            <option value="all">Buscar en Todo</option>
+            <option value="title">Título del Libro</option>
+            <option value="author">Autor del Libro</option>
+            <option value="year">Año de Publicación</option>
+            <option value="publisher">Editorial</option>
+        </select>
+        <input type="text" id="search-query" placeholder="Buscar...">
+        <button id="search-button">Buscar</button>
+    </div>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>

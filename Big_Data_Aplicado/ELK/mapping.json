@@ -1,0 +1,31 @@
+{
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "ISBN": {
+        "type": "keyword"
+      },
+      "URL-L": {
+        "type": "keyword"
+      },
+      "URL-M": {
+        "type": "keyword"
+      },
+      "URL-S": {
+        "type": "keyword"
+      },
+      "author": {
+        "type": "text"
+      },
+      "message": {
+        "type": "text"
+      },
+      "publisher": {
+        "type": "text"
+      },
+      "title": {
+        "type": "text"
+      }
+    }
+  }
