@@ -1,0 +1,125 @@
+[
+    {
+        "id": "2d8028790073bbaf",
+        "type": "tab",
+        "label": "Valenbisi 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9469c5f9fa637f31",
+        "type": "inject",
+        "z": "2d8028790073bbaf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "e23258af7a68ccfb"
+            ]
+        ]
+    },
+    {
+        "id": "e23258af7a68ccfb",
+        "type": "http request",
+        "z": "2d8028790073bbaf",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://valencia.opendatasoft.com/api/explore/v2.1/catalog/datasets/valenbisi-disponibilitat-valenbisi-dsiponibilidad/records?limit=100",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 100,
+        "wires": [
+            [
+                "3e546bb8183be6c0"
+            ]
+        ]
+    },
+    {
+        "id": "534e07e7058eed57",
+        "type": "mongodb out",
+        "z": "2d8028790073bbaf",
+        "mongodb": "032e473629e604ca",
+        "name": "",
+        "collection": "valenbisi",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 690,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "2daa9f1ecf872539",
+        "type": "debug",
+        "z": "2d8028790073bbaf",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3e546bb8183be6c0",
+        "type": "function",
+        "z": "2d8028790073bbaf",
+        "name": "function 3",
+        "func": "msg.payload = msg.payload.results;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 100,
+        "wires": [
+            [
+                "2daa9f1ecf872539",
+                "534e07e7058eed57"
+            ]
+        ]
+    },
+    {
+        "id": "032e473629e604ca",
+        "type": "mongodb",
+        "hostname": "192.168.208.103:27017",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "nodered",
+        "name": "MongoDB"
+    }
+]

@@ -1,0 +1,125 @@
+[
+    {
+        "id": "e19d28329a961015",
+        "type": "tab",
+        "label": "Valenbisi 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "93fbb0f4cf0243b7",
+        "type": "inject",
+        "z": "e19d28329a961015",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "6c637dcfeb0fcd71"
+            ]
+        ]
+    },
+    {
+        "id": "6c637dcfeb0fcd71",
+        "type": "http request",
+        "z": "e19d28329a961015",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://valencia.opendatasoft.com/api/explore/v2.1/catalog/datasets/valenbisi-disponibilitat-valenbisi-dsiponibilidad/records?limit=100",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 160,
+        "wires": [
+            [
+                "d8895ad4abe0b239"
+            ]
+        ]
+    },
+    {
+        "id": "c086f1943aee1604",
+        "type": "mongodb out",
+        "z": "e19d28329a961015",
+        "mongodb": "032e473629e604ca",
+        "name": "",
+        "collection": "valenbisi_totales",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 760,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8ebb3423bea113a1",
+        "type": "debug",
+        "z": "e19d28329a961015",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d8895ad4abe0b239",
+        "type": "function",
+        "z": "e19d28329a961015",
+        "name": "function 4",
+        "func": "let total_estaciones = msg.payload.total_count;\nlet results = msg.payload.results;\nlet totalBicicletasDisponibles = msg.payload.results.reduce((total, estacion) => total + estacion.available, 0);\nlet disponibles = 0;\nlet total_bicicletas = 0\nresults.forEach((element)=> {\n    disponibles += element.available;\n    total_bicicletas += element.total \n});\nlet objeto = {\n    total_estaciones : total_estaciones,\n    total_bicicletas : total_bicicletas,\n    disponibles : disponibles,\n    fecha : new Date()\n}\nmsg.payload = objeto\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 160,
+        "wires": [
+            [
+                "8ebb3423bea113a1",
+                "c086f1943aee1604"
+            ]
+        ]
+    },
+    {
+        "id": "032e473629e604ca",
+        "type": "mongodb",
+        "hostname": "192.168.208.103:27017",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "nodered",
+        "name": "MongoDB"
+    }
+]

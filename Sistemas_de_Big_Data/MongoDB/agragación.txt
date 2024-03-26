@@ -1,0 +1,24 @@
+db.estaciones.aggregate([
+    {
+      $group: {
+        _id: null, // Agrupa todos los documentos
+        total_estaciones: { $sum: 1 }, // Cuenta el número total de estaciones
+        total_bicicletas: { $sum: "$total" }, // Suma el total de bicicletas en todas las estaciones
+        disponibles: { $sum: "$available" } // Suma el total de bicicletas disponibles en todas las estaciones
+      }
+    },
+    {
+      $addFields: {
+        fecha: new Date() // Agrega la fecha actual al documento de resultado
+      }
+    },
+    {
+      $merge: {
+        into: "resumenEstaciones", // Nombre de la colección donde quieres guardar el resultado
+        on: "_id", // Campo(s) clave para identificar el documento. En este caso, es irrelevante porque estamos agrupando todo sin especificar un _id.
+        whenMatched: "replace", // Si el documento coincide (según 'on'), reemplázalo
+        whenNotMatched: "insert" // Si el documento no existe, insértalo
+      }
+    }
+  ]);
+  

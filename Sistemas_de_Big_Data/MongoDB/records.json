@@ -1,0 +1,2505 @@
+{
+    "total_count": 276,
+    "results": [
+        {
+            "address": "Francisco Cubells - San Jos\u00e9 de la Vega",
+            "number": 159,
+            "open": "T",
+            "available": 10,
+            "free": 5,
+            "total": 17,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3347222532485526,
+                        39.463449276866356
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3347222532485526,
+                "lat": 39.463449276866356
+            }
+        },
+        {
+            "address": "Mediterr\u00e1neo - Plaza Cruz de Ca\u00f1amelar",
+            "number": 161,
+            "open": "T",
+            "available": 12,
+            "free": 3,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3317262387298495,
+                        39.46796929073871
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3317262387298495,
+                "lat": 39.46796929073871
+            }
+        },
+        {
+            "address": "Cirilo Amor\u00f3s - Jorge Juan (Mercado Col\u00f3n)",
+            "number": 30,
+            "open": "T",
+            "available": 16,
+            "free": 2,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36849936365579583,
+                        39.468601309884924
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36849936365579583,
+                "lat": 39.468601309884924
+            }
+        },
+        {
+            "address": "General Elio - Llano del Real",
+            "number": 83,
+            "open": "T",
+            "available": 8,
+            "free": 17,
+            "total": 25,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3669703519914759,
+                        39.47758533929587
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3669703519914759,
+                "lat": 39.47758533929587
+            }
+        },
+        {
+            "address": "Blasco Iba\u00f1ez - Poeta Dur\u00e1n Tortajada",
+            "number": 93,
+            "open": "T",
+            "available": 19,
+            "free": 19,
+            "total": 38,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.34380927742382206,
+                        39.472282310670764
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.34380927742382206,
+                "lat": 39.472282310670764
+            }
+        },
+        {
+            "address": "Lu\u00eds Peix\u00f3 20",
+            "number": 108,
+            "open": "T",
+            "available": 8,
+            "free": 7,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3339152679031098,
+                        39.47382619077011
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3339152679031098,
+                "lat": 39.47382619077011
+            }
+        },
+        {
+            "address": "San Vicente Paul - Santiago Rusi\u00f1ol",
+            "number": 232,
+            "open": "T",
+            "available": 3,
+            "free": 12,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36575333473149996,
+                        39.49464439592328
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36575333473149996,
+                "lat": 39.49464439592328
+            }
+        },
+        {
+            "address": "Ninot - Regino Mas",
+            "number": 270,
+            "open": "T",
+            "available": 7,
+            "free": 9,
+            "total": 16,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.39288942312141745,
+                        39.50007542649037
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.39288942312141745,
+                "lat": 39.50007542649037
+            }
+        },
+        {
+            "address": "Veles e Vents",
+            "number": 276,
+            "open": "T",
+            "available": 18,
+            "free": 1,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.32376521655842594,
+                        39.46197526682713
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.32376521655842594,
+                "lat": 39.46197526682713
+            }
+        },
+        {
+            "address": "Aularios Universidad de Valencia",
+            "number": 105,
+            "open": "T",
+            "available": 21,
+            "free": 9,
+            "total": 30,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3443952655704271,
+                        39.47835119969391
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3443952655704271,
+                "lat": 39.47835119969391
+            }
+        },
+        {
+            "address": "Perez Gald\u00f3s - Nou Moles",
+            "number": 201,
+            "open": "T",
+            "available": 4,
+            "free": 16,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.39366844724894096,
+                        39.47171233289752
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.39366844724894096,
+                "lat": 39.47171233289752
+            }
+        },
+        {
+            "address": "Reina Violante - Escultor Garc\u00eda Mas",
+            "number": 203,
+            "open": "T",
+            "available": 6,
+            "free": 9,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.40118246297404103,
+                        39.48460937883364
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.40118246297404103,
+                "lat": 39.48460937883364
+            }
+        },
+        {
+            "address": "Florista - T4 (Palau de Congressos)",
+            "number": 239,
+            "open": "T",
+            "available": 0,
+            "free": 20,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.39996444953107335,
+                        39.4969854198013
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.39996444953107335,
+                "lat": 39.4969854198013
+            }
+        },
+        {
+            "address": "Albalat dels Tarongers - Paseo Facultades",
+            "number": 104,
+            "open": "T",
+            "available": 16,
+            "free": 2,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3472752845405608,
+                        39.478386332978474
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3472752845405608,
+                "lat": 39.478386332978474
+            }
+        },
+        {
+            "address": "Llano de la Zaid\u00eda - Doctor Ol\u00f3riz",
+            "number": 153,
+            "open": "T",
+            "available": 12,
+            "free": 12,
+            "total": 24,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3805912745331588,
+                        39.48305822805289
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3805912745331588,
+                "lat": 39.48305822805289
+            }
+        },
+        {
+            "address": "Salamanca - Reina Do\u00f1a Germana",
+            "number": 155,
+            "open": "T",
+            "available": 19,
+            "free": 1,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3630783484267159,
+                        39.46495329574819
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3630783484267159,
+                "lat": 39.46495329574819
+            }
+        },
+        {
+            "address": "Corts Valencianes - La Safor",
+            "number": 226,
+            "open": "T",
+            "available": 0,
+            "free": 30,
+            "total": 30,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3988594505654264,
+                        39.49086439918327
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3988594505654264,
+                "lat": 39.49086439918327
+            }
+        },
+        {
+            "address": "Av. de la Plata (Museo Fallero)",
+            "number": 42,
+            "open": "T",
+            "available": 1,
+            "free": 19,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3586583378805894,
+                        39.45878127329601
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3586583378805894,
+                "lat": 39.45878127329601
+            }
+        },
+        {
+            "address": "General Urrutia - Av. de la Plata",
+            "number": 44,
+            "open": "T",
+            "available": 0,
+            "free": 19,
+            "total": 19,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36301435452576164,
+                        39.45642926768604
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36301435452576164,
+                "lat": 39.45642926768604
+            }
+        },
+        {
+            "address": "Francia - Menorca",
+            "number": 56,
+            "open": "T",
+            "available": 9,
+            "free": 6,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3444052893928658,
+                        39.45842126509135
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3444052893928658,
+                "lat": 39.45842126509135
+            }
+        },
+        {
+            "address": "Plaza Espa\u00f1a",
+            "number": 58,
+            "open": "T",
+            "available": 14,
+            "free": 6,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3815864106638383,
+                        39.46621830848607
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3815864106638383,
+                "lat": 39.46621830848607
+            }
+        },
+        {
+            "address": "Beato Nicol\u00e1s Factor - Convento de Jes\u00fas",
+            "number": 199,
+            "open": "T",
+            "available": 2,
+            "free": 13,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.39155844823975844,
+                        39.46158829801141
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.39155844823975844,
+                "lat": 39.46158829801141
+            }
+        },
+        {
+            "address": "Moraira - Alta del Mar",
+            "number": 273,
+            "open": "T",
+            "available": 15,
+            "free": 0,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3332722584595297,
+                        39.450305232524904
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3332722584595297,
+                "lat": 39.450305232524904
+            }
+        },
+        {
+            "address": "Moreras (Oceanogr\u00e1fico)",
+            "number": 51,
+            "open": "T",
+            "available": 9,
+            "free": 11,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3472273049060467,
+                        39.45218324552497
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3472273049060467,
+                "lat": 39.45218324552497
+            }
+        },
+        {
+            "address": "P\u00edo XII - Monestir de Poblet",
+            "number": 173,
+            "open": "T",
+            "available": 4,
+            "free": 16,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.394678441209281,
+                        39.484541375368174
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.394678441209281,
+                "lat": 39.484541375368174
+            }
+        },
+        {
+            "address": "Juan XXIII - Domingo G\u00f3mez",
+            "number": 175,
+            "open": "T",
+            "available": 7,
+            "free": 8,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.38271239433339566,
+                        39.49258939642365
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.38271239433339566,
+                "lat": 39.49258939642365
+            }
+        },
+        {
+            "address": "Alcudia de Crespins - Pedro Patricio Mey",
+            "number": 177,
+            "open": "T",
+            "available": 5,
+            "free": 10,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3734883620528129,
+                        39.493545396079504
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3734883620528129,
+                "lat": 39.493545396079504
+            }
+        },
+        {
+            "address": "Av. de la Plata - Zapadores",
+            "number": 179,
+            "open": "T",
+            "available": 0,
+            "free": 23,
+            "total": 23,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36642636792637634,
+                        39.45547226612543
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36642636792637634,
+                "lat": 39.45547226612543
+            }
+        },
+        {
+            "address": "Vicente la Roda - Ingeniero Fausto Elio",
+            "number": 272,
+            "open": "T",
+            "available": 13,
+            "free": 1,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.33219023115385166,
+                        39.48062333339468
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.33219023115385166,
+                "lat": 39.48062333339468
+            }
+        },
+        {
+            "address": "Malvarrosa - R\u00edo Tajo",
+            "number": 168,
+            "open": "T",
+            "available": 9,
+            "free": 6,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.32788721869941045,
+                        39.47687131828106
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.32788721869941045,
+                "lat": 39.47687131828106
+            }
+        },
+        {
+            "address": "Cra. Malilla - Bulevar Sur",
+            "number": 190,
+            "open": "T",
+            "available": 13,
+            "free": 5,
+            "total": 18,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.38029642271654757,
+                        39.44608224133691
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.38029642271654757,
+                "lat": 39.44608224133691
+            }
+        },
+        {
+            "address": "Molinell - Calder\u00f3n de la Barca",
+            "number": 77,
+            "open": "T",
+            "available": 1,
+            "free": 19,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36566734195835493,
+                        39.48497336307338
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36566734195835493,
+                "lat": 39.48497336307338
+            }
+        },
+        {
+            "address": "Menorca - Baleares",
+            "number": 62,
+            "open": "T",
+            "available": 12,
+            "free": 8,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3421522812931475,
+                        39.45981126842254
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3421522812931475,
+                "lat": 39.45981126842254
+            }
+        },
+        {
+            "address": "Guillem de Anglesola - Av. Puerto",
+            "number": 66,
+            "open": "T",
+            "available": 0,
+            "free": 25,
+            "total": 25,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3462612916525901,
+                        39.46427128532339
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3462612916525901,
+                "lat": 39.46427128532339
+            }
+        },
+        {
+            "address": "Arag\u00f3n - Vicente Sancho Tello",
+            "number": 78,
+            "open": "T",
+            "available": 2,
+            "free": 18,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.358688329939162,
+                        39.46994531050937
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.358688329939162,
+                "lat": 39.46994531050937
+            }
+        },
+        {
+            "address": "Amadeo de Saboya (frente Ayuntamiento)",
+            "number": 80,
+            "open": "T",
+            "available": 5,
+            "free": 20,
+            "total": 25,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36229833944736023,
+                        39.47374232444908
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36229833944736023,
+                "lat": 39.47374232444908
+            }
+        },
+        {
+            "address": "Blasco Iba\u00f1ez - Jaime Roig",
+            "number": 85,
+            "open": "T",
+            "available": 12,
+            "free": 11,
+            "total": 23,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3647153422684407,
+                        39.479464345022826
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3647153422684407,
+                "lat": 39.479464345022826
+            }
+        },
+        {
+            "address": "Manuel Broseta i Pont - Naranjos",
+            "number": 112,
+            "open": "T",
+            "available": 33,
+            "free": 7,
+            "total": 40,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.34227526701990957,
+                        39.47858033137406
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.34227526701990957,
+                "lat": 39.47858033137406
+            }
+        },
+        {
+            "address": "UPV Inform\u00e1tica",
+            "number": 114,
+            "open": "T",
+            "available": 20,
+            "free": 10,
+            "total": 30,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.346591279156021,
+                        39.4818043438759
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.346591279156021,
+                "lat": 39.4818043438759
+            }
+        },
+        {
+            "address": "G\u00f3mez Ferrer - \u00c1lvaro de Baz\u00e1n",
+            "number": 118,
+            "open": "T",
+            "available": 10,
+            "free": 10,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3604163266878076,
+                        39.480466345728246
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3604163266878076,
+                "lat": 39.480466345728246
+            }
+        },
+        {
+            "address": "Catalu\u00f1a - Doctor Vicente Zaragoz\u00e1",
+            "number": 115,
+            "open": "T",
+            "available": 16,
+            "free": 0,
+            "total": 16,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3521482985209469,
+                        39.481562345598135
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3521482985209469,
+                "lat": 39.481562345598135
+            }
+        },
+        {
+            "address": "Doctor Vicente Zaragoz\u00e1 - Emilio Bar\u00f3",
+            "number": 120,
+            "open": "T",
+            "available": 16,
+            "free": 1,
+            "total": 18,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36204632906281087,
+                        39.484880361257815
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36204632906281087,
+                "lat": 39.484880361257815
+            }
+        },
+        {
+            "address": "Pio XII - Men\u00e9ndez PIdal (Nuevo Centro)",
+            "number": 143,
+            "open": "T",
+            "available": 4,
+            "free": 26,
+            "total": 30,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.39093643241708165,
+                        39.4795373575288
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.39093643241708165,
+                "lat": 39.4795373575288
+            }
+        },
+        {
+            "address": "Peris y Valero - Salamanca",
+            "number": 149,
+            "open": "T",
+            "available": 19,
+            "free": 1,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36179534600499663,
+                        39.462934287947085
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36179534600499663,
+                "lat": 39.462934287947085
+            }
+        },
+        {
+            "address": "Jos\u00e9 Mar\u00eda de Haro - Justo y Pastor",
+            "number": 160,
+            "open": "T",
+            "available": 16,
+            "free": 4,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.33898126470999496,
+                        39.467336291769534
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.33898126470999496,
+                "lat": 39.467336291769534
+            }
+        },
+        {
+            "address": "Armada Espa\u00f1ola - Mariano Cuber",
+            "number": 162,
+            "open": "T",
+            "available": 12,
+            "free": 6,
+            "total": 19,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3297952360224295,
+                        39.46360427573933
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3297952360224295,
+                "lat": 39.46360427573933
+            }
+        },
+        {
+            "address": "Pav\u00eda - Columbretes",
+            "number": 164,
+            "open": "T",
+            "available": 10,
+            "free": 7,
+            "total": 17,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3246342149862025,
+                        39.46846028903177
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3246342149862025,
+                "lat": 39.46846028903177
+            }
+        },
+        {
+            "address": "Convento Carmelitas - Alboraya",
+            "number": 130,
+            "open": "T",
+            "available": 8,
+            "free": 7,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.370210358642677,
+                        39.483238360081586
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.370210358642677,
+                "lat": 39.483238360081586
+            }
+        },
+        {
+            "address": "San Pancracio - Periodista Llorente",
+            "number": 138,
+            "open": "T",
+            "available": 6,
+            "free": 14,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.38422240207482833,
+                        39.48819038284581
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.38422240207482833,
+                "lat": 39.48819038284581
+            }
+        },
+        {
+            "address": "Campanar - Nicasio Benlloch",
+            "number": 140,
+            "open": "T",
+            "available": 6,
+            "free": 14,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3896004206542252,
+                        39.48800438494039
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3896004206542252,
+                "lat": 39.48800438494039
+            }
+        },
+        {
+            "address": "Isabel de Villena - Mendiz\u00e1bal",
+            "number": 170,
+            "open": "T",
+            "available": 19,
+            "free": 1,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.32533420529241996,
+                        39.482973337910934
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.32533420529241996,
+                "lat": 39.482973337910934
+            }
+        },
+        {
+            "address": "Bombero Ram\u00f3n Duart - Hermanos Maristas",
+            "number": 184,
+            "open": "T",
+            "available": 11,
+            "free": 4,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36557036636455215,
+                        39.45278225629358
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36557036636455215,
+                "lat": 39.45278225629358
+            }
+        },
+        {
+            "address": "Puerto Rico - Cuba",
+            "number": 156,
+            "open": "T",
+            "available": 14,
+            "free": 1,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3763453968184098,
+                        39.46096428829767
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3763453968184098,
+                "lat": 39.46096428829767
+            }
+        },
+        {
+            "address": "Av. del Cid - Juli\u00e1n Pe\u00f1a",
+            "number": 200,
+            "open": "T",
+            "available": 2,
+            "free": 13,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3932144497376184,
+                        39.467737319045916
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3932144497376184,
+                "lat": 39.467737319045916
+            }
+        },
+        {
+            "address": "Ausias March - Av. de la Plata",
+            "number": 183,
+            "open": "T",
+            "available": 10,
+            "free": 8,
+            "total": 18,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3722843899417025,
+                        39.45262025913349
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3722843899417025,
+                "lat": 39.45262025913349
+            }
+        },
+        {
+            "address": "Ebanista Caselles - Ausias March",
+            "number": 185,
+            "open": "T",
+            "available": 3,
+            "free": 12,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3705033850186671,
+                        39.45004424948915
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3705033850186671,
+                "lat": 39.45004424948915
+            }
+        },
+        {
+            "address": "Pintor Stolz - Nueve de Octubre",
+            "number": 217,
+            "open": "T",
+            "available": 0,
+            "free": 25,
+            "total": 25,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.40459648652865626,
+                        39.47032833321364
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.40459648652865626,
+                "lat": 39.47032833321364
+            }
+        },
+        {
+            "address": "Camp del Turia - Corts Valencianes",
+            "number": 240,
+            "open": "T",
+            "available": 0,
+            "free": 20,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.40154745608135123,
+                        39.495004413973305
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.40154745608135123,
+                "lat": 39.495004413973305
+            }
+        },
+        {
+            "address": "Campos Crespo - Juan de Garay",
+            "number": 210,
+            "open": "T",
+            "available": 5,
+            "free": 10,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.39671647037206986,
+                        39.45555328036534
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.39671647037206986,
+                "lat": 39.45555328036534
+            }
+        },
+        {
+            "address": "Fray Juan\u00edpero Serra - Torrente",
+            "number": 212,
+            "open": "T",
+            "available": 12,
+            "free": 3,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.40039647823746194,
+                        39.46148430130945
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.40039647823746194,
+                "lat": 39.46148430130945
+            }
+        },
+        {
+            "address": "Santa Cruz de Tenerife, 21",
+            "number": 214,
+            "open": "T",
+            "available": 5,
+            "free": 10,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.4005764763988502,
+                        39.464932313028335
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.4005764763988502,
+                "lat": 39.464932313028335
+            }
+        },
+        {
+            "address": "Levante U.D. - Ecuador",
+            "number": 237,
+            "open": "T",
+            "available": 7,
+            "free": 8,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.39103842063587124,
+                        39.494758407776374
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.39103842063587124,
+                "lat": 39.494758407776374
+            }
+        },
+        {
+            "address": "Pio IX - M\u00fasico Cabanilles",
+            "number": 259,
+            "open": "T",
+            "available": 10,
+            "free": 10,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3930154660803912,
+                        39.44546024514969
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3930154660803912,
+                "lat": 39.44546024514969
+            }
+        },
+        {
+            "address": "Cra. Malilla - Olt\u00e1",
+            "number": 192,
+            "open": "T",
+            "available": 11,
+            "free": 9,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3787144113919625,
+                        39.45263726161547
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3787144113919625,
+                "lat": 39.45263726161547
+            }
+        },
+        {
+            "address": "Padre Esteban Pernet - Casa Misericordia",
+            "number": 263,
+            "open": "T",
+            "available": 11,
+            "free": 7,
+            "total": 18,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.4096445056541294,
+                        39.467043324648515
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.4096445056541294,
+                "lat": 39.467043324648515
+            }
+        },
+        {
+            "address": "Alcasser - Poeta Alberto Lista",
+            "number": 265,
+            "open": "T",
+            "available": 1,
+            "free": 14,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.40811749816977394,
+                        39.470973337167365
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.40811749816977394,
+                "lat": 39.470973337167365
+            }
+        },
+        {
+            "address": "Plaza Am\u00e9rica - Cirilo Amor\u00f3s - Sorn\u00ed",
+            "number": 29,
+            "open": "T",
+            "available": 12,
+            "free": 8,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3652993525279599,
+                        39.47011231364647
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3652993525279599,
+                "lat": 39.47011231364647
+            }
+        },
+        {
+            "address": "Huesca - Bar\u00f3n de C\u00e1rcer",
+            "number": 14,
+            "open": "T",
+            "available": 14,
+            "free": 6,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.37972440222295445,
+                        39.46896731649349
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.37972440222295445,
+                "lat": 39.46896731649349
+            }
+        },
+        {
+            "address": "Col\u00f3n 20-22",
+            "number": 18,
+            "open": "T",
+            "available": 8,
+            "free": 15,
+            "total": 24,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.37312937987373457,
+                        39.468191311513856
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.37312937987373457,
+                "lat": 39.468191311513856
+            }
+        },
+        {
+            "address": "Navarro Reverter - Grabador Esteve",
+            "number": 28,
+            "open": "T",
+            "available": 20,
+            "free": 9,
+            "total": 29,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36775135880068294,
+                        39.47158231958138
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36775135880068294,
+                "lat": 39.47158231958138
+            }
+        },
+        {
+            "address": "Regne de Valencia - Doctor Sumsi",
+            "number": 34,
+            "open": "T",
+            "available": 17,
+            "free": 0,
+            "total": 17,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36996137299092113,
+                        39.46412229654908
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36996137299092113,
+                "lat": 39.46412229654908
+            }
+        },
+        {
+            "address": "Fontanars dels Aforins - Vall d'Uix\u00f3",
+            "number": 198,
+            "open": "T",
+            "available": 1,
+            "free": 19,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.395316462028443,
+                        39.46088029740053
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.395316462028443,
+                "lat": 39.46088029740053
+            }
+        },
+        {
+            "address": "Tomas de Villarroya - San Vicente",
+            "number": 255,
+            "open": "T",
+            "available": 5,
+            "free": 13,
+            "total": 18,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.38602944085901075,
+                        39.447703249066144
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.38602944085901075,
+                "lat": 39.447703249066144
+            }
+        },
+        {
+            "address": "Plaza Salvador Soria, 8",
+            "number": 257,
+            "open": "T",
+            "available": 8,
+            "free": 12,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.38910445245389036,
+                        39.44525124234686
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.38910445245389036,
+                "lat": 39.44525124234686
+            }
+        },
+        {
+            "address": "Campamento, 81",
+            "number": 269,
+            "open": "T",
+            "available": 4,
+            "free": 11,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.42626353678444817,
+                        39.49990744160243
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.42626353678444817,
+                "lat": 39.49990744160243
+            }
+        },
+        {
+            "address": "Albacete - Maluquer",
+            "number": 243,
+            "open": "T",
+            "available": 0,
+            "free": 18,
+            "total": 18,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3845424236611566,
+                        39.46282029901061
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3845424236611566,
+                "lat": 39.46282029901061
+            }
+        },
+        {
+            "address": "Nueve de Octubre - Cieza",
+            "number": 245,
+            "open": "T",
+            "available": 10,
+            "free": 10,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.40527029936434095,
+                        39.47213024806011
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.40527029936434095,
+                "lat": 39.47213024806011
+            }
+        },
+        {
+            "address": "Jos\u00e9 Meli\u00e1 Castell\u00f3 - Campos Crespo",
+            "number": 253,
+            "open": "T",
+            "available": 1,
+            "free": 14,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.4011014879360589,
+                        39.45272627278094
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.4011014879360589,
+                "lat": 39.45272627278094
+            }
+        },
+        {
+            "address": "Doctor Tom\u00e1s Sala - Carteros",
+            "number": 254,
+            "open": "T",
+            "available": 5,
+            "free": 14,
+            "total": 19,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3899174536874086,
+                        39.447714251158565
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3899174536874086,
+                "lat": 39.447714251158565
+            }
+        },
+        {
+            "address": "Pintor Rafael Solves - Jose Soto Mico",
+            "number": 258,
+            "open": "T",
+            "available": 1,
+            "free": 14,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3891374575312111,
+                        39.43982822413676
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3891374575312111,
+                "lat": 39.43982822413676
+            }
+        },
+        {
+            "address": "Tres Forques - Colonia Espa\u00f1ola de Mexico",
+            "number": 262,
+            "open": "T",
+            "available": 13,
+            "free": 5,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.40922550688289966,
+                        39.463472312903384
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.40922550688289966,
+                "lat": 39.463472312903384
+            }
+        },
+        {
+            "address": "Av. del Cid - Marconi",
+            "number": 264,
+            "open": "T",
+            "available": 7,
+            "free": 13,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.4144325204450301,
+                        39.46916033373618
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.4144325204450301,
+                "lat": 39.46916033373618
+            }
+        },
+        {
+            "address": "Dels Gremis - Campos Crespo",
+            "number": 252,
+            "open": "T",
+            "available": 3,
+            "free": 17,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.40357449843597065,
+                        39.45028826570709
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.40357449843597065,
+                "lat": 39.45028826570709
+            }
+        },
+        {
+            "address": "Gaspar Aguilar - Vicente Parra",
+            "number": 86,
+            "open": "T",
+            "available": 3,
+            "free": 17,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.39119345191575566,
+                        39.4552402764855
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.39119345191575566,
+                "lat": 39.4552402764855
+            }
+        },
+        {
+            "address": "Blasco Iba\u00f1ez - Clariano",
+            "number": 94,
+            "open": "T",
+            "available": 5,
+            "free": 15,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.35158330144926053,
+                        39.47537832465668
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.35158330144926053,
+                "lat": 39.47537832465668
+            }
+        },
+        {
+            "address": "Blasco Iba\u00f1ez - Yecla",
+            "number": 96,
+            "open": "T",
+            "available": 9,
+            "free": 11,
+            "total": 21,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3482142912637639,
+                        39.47355431688417
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3482142912637639,
+                "lat": 39.47355431688417
+            }
+        },
+        {
+            "address": "Justo y Pastor - Duque de Gaeta",
+            "number": 98,
+            "open": "T",
+            "available": 4,
+            "free": 11,
+            "total": 15,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.348442294427372,
+                        39.469680303996114
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.348442294427372,
+                "lat": 39.469680303996114
+            }
+        },
+        {
+            "address": "Plaza M\u00fasico Esp\u00ed",
+            "number": 234,
+            "open": "T",
+            "available": 0,
+            "free": 15,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3736443597891149,
+                        39.49649940567526
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3736443597891149,
+                "lat": 39.49649940567526
+            }
+        },
+        {
+            "address": "Peris y Valero - Luis Sant\u00e1ngel",
+            "number": 37,
+            "open": "T",
+            "available": 15,
+            "free": 5,
+            "total": 20,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3664406250017559,
+                        39.460937800028375
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3664406250017559,
+                "lat": 39.460937800028375
+            }
+        },
+        {
+            "address": "Guillem de Castro (Torres de Quart)",
+            "number": 82,
+            "open": "T",
+            "available": 1,
+            "free": 13,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3839144104057024,
+                        39.47605634238628
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3839144104057024,
+                "lat": 39.47605634238628
+            }
+        },
+        {
+            "address": "Grabador Jordan - Escultor Pastor",
+            "number": 91,
+            "open": "T",
+            "available": 8,
+            "free": 7,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36757337969703135,
+                        39.44412522887422
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36757337969703135,
+                "lat": 39.44412522887422
+            }
+        },
+        {
+            "address": "Naranjos (Magisterio)",
+            "number": 95,
+            "open": "T",
+            "available": 15,
+            "free": 18,
+            "total": 33,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.34611927939668474,
+                        39.47983533734356
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.34611927939668474,
+                "lat": 39.47983533734356
+            }
+        },
+        {
+            "address": "Alboc\u00e1cer - Vinaroz",
+            "number": 123,
+            "open": "T",
+            "available": 1,
+            "free": 19,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36484133609518726,
+                        39.487671371814656
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36484133609518726,
+                "lat": 39.487671371814656
+            }
+        },
+        {
+            "address": "La Vall d'Albaida - Corts Valencianes",
+            "number": 241,
+            "open": "T",
+            "available": 1,
+            "free": 14,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.4018904586642118,
+                        39.49297840711153
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.4018904586642118,
+                "lat": 39.49297840711153
+            }
+        },
+        {
+            "address": "Plaza Luis Cano, 5",
+            "number": 268,
+            "open": "T",
+            "available": 8,
+            "free": 2,
+            "total": 10,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.41849350927046264,
+                        39.50144544298018
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.41849350927046264,
+                "lat": 39.50144544298018
+            }
+        },
+        {
+            "address": "General Urrutia - Granada",
+            "number": 41,
+            "open": "T",
+            "available": 8,
+            "free": 11,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36477635908979195,
+                        39.458912276426375
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36477635908979195,
+                "lat": 39.458912276426375
+            }
+        },
+        {
+            "address": "Blasco Iba\u00f1ez - Pintor Jos\u00e9 Mongrell",
+            "number": 99,
+            "open": "T",
+            "available": 1,
+            "free": 20,
+            "total": 21,
+            "ticket": "T",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3404842660990001,
+                        39.47134430635022
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3404842660990001,
+                "lat": 39.47134430635022
+            }
+        },
+        {
+            "address": "Rub\u00e9n Dar\u00edo - Plaza Fray Luis Colomer",
+            "number": 103,
+            "open": "T",
+            "available": 4,
+            "free": 11,
+            "total": 15,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.3523713017453889,
+                        39.47845333567255
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.3523713017453889,
+                "lat": 39.47845333567255
+            }
+        },
+        {
+            "address": "Escultor Jos\u00e9 Capuz - Oriente",
+            "number": 43,
+            "open": "T",
+            "available": 1,
+            "free": 19,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.36115334583643566,
+                        39.459477276259406
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.36115334583643566,
+                "lat": 39.459477276259406
+            }
+        },
+        {
+            "address": "Blasco Iba\u00f1ez - Mestre Ripoll",
+            "number": 100,
+            "open": "T",
+            "available": 19,
+            "free": 1,
+            "total": 20,
+            "ticket": "F",
+            "updated_at": "23/01/2024 17:44:30",
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -0.33815025853445674,
+                        39.471634305646866
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_point_2d": {
+                "lon": -0.33815025853445674,
+                "lat": 39.471634305646866
+            }
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+[
+    {
+        "id": "6639f8a5e35ebf57",
+        "type": "tab",
+        "label": "Flujo 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "91fdea532a992aed",
+        "type": "inject",
+        "z": "6639f8a5e35ebf57",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "e2a747e4cc25fad2"
+            ]
+        ]
+    },
+    {
+        "id": "b89ecaf76a692461",
+        "type": "tcp out",
+        "z": "6639f8a5e35ebf57",
+        "name": "",
+        "host": "192.168.208.100",
+        "port": "1880",
+        "beserver": "client",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 870,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "fbfb15628dc12eac",
+        "type": "debug",
+        "z": "6639f8a5e35ebf57",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e2a747e4cc25fad2",
+        "type": "template",
+        "z": "6639f8a5e35ebf57",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "HOLAAAAAA This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 520,
+        "y": 180,
+        "wires": [
+            [
+                "b89ecaf76a692461"
+            ]
+        ]
+    },
+    {
+        "id": "b6fac830cdc1229a",
+        "type": "template",
+        "z": "6639f8a5e35ebf57",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 520,
+        "y": 280,
+        "wires": [
+            [
+                "fbfb15628dc12eac"
+            ]
+        ]
+    },
+    {
+        "id": "a8c15ecee47a2dbf",
+        "type": "tcp in",
+        "z": "6639f8a5e35ebf57",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "1880",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "b6fac830cdc1229a"
+            ]
+        ]
+    }
+]
